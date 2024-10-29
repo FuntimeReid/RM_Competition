@@ -29,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 64,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
@@ -41,19 +41,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 60,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 61,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 62,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 54,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
@@ -190,35 +190,39 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Core/Inc"
+					"path" : "E:/RM/CubeMx/RM_Competition/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/CMSIS/Include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/CMSIS/Include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "E:/RM/CubeMx/RM_Competition/Task/Inc"
 				}
 			],
 			"language" : "C",
@@ -232,8 +236,6 @@
 			},
 			"sourceIndexes" : 
 			[
-				5,
-				6,
 				7,
 				8,
 				9,
@@ -241,12 +243,10 @@
 				11,
 				12,
 				13,
-				78,
-				79,
-				80,
-				81,
-				82,
-				83,
+				14,
+				15,
+				16,
+				17,
 				84,
 				85,
 				86,
@@ -256,16 +256,24 @@
 				90,
 				91,
 				92,
+				93,
 				94,
+				95,
+				96,
+				97,
 				98,
 				99,
-				118,
-				119,
-				121,
-				122,
-				123,
-				124,
-				125
+				101,
+				105,
+				106,
+				125,
+				126,
+				128,
+				129,
+				130,
+				131,
+				132,
+				134
 			]
 		},
 		{
@@ -358,41 +366,45 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Core/Inc"
+					"path" : "E:/RM/CubeMx/RM_Competition/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "E:/RM/CubeMx/RM_Competition/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "C:/Users/73932/CLionProjects/RM_Competition/Drivers/CMSIS/Include"
+					"path" : "E:/RM/CubeMx/RM_Competition/Drivers/CMSIS/Include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "E:/RM/CubeMx/RM_Competition/Task/Inc"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				14
+				18
 			]
 		}
 	],
@@ -421,7 +433,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/73932/CLionProjects/RM_Competition/cmake-build-debug/RM_Competition.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=E:/RM/CubeMx/RM_Competition/cmake-build-debug/RM_Competition.map",
 				"role" : "flags"
 			},
 			{
@@ -446,7 +458,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "C:/Users/73932/CLionProjects/RM_Competition/STM32F407IGHX_FLASH.ld",
+				"fragment" : "E:/RM/CubeMx/RM_Competition/STM32F407IGHX_FLASH.ld",
 				"role" : "flags"
 			}
 		],
@@ -470,13 +482,11 @@
 				2,
 				3,
 				4,
-				15,
-				16,
-				17,
+				5,
+				6,
 				19,
 				20,
 				21,
-				22,
 				23,
 				24,
 				25,
@@ -503,10 +513,10 @@
 				46,
 				47,
 				48,
+				49,
 				50,
 				51,
 				52,
-				53,
 				54,
 				55,
 				56,
@@ -530,17 +540,16 @@
 				74,
 				75,
 				76,
-				93,
-				95,
-				96,
-				97,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
 				100,
-				101,
 				102,
 				103,
 				104,
-				105,
-				106,
 				107,
 				108,
 				109,
@@ -552,15 +561,21 @@
 				115,
 				116,
 				117,
-				120
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				127,
+				133
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				5,
-				6,
 				7,
 				8,
 				9,
@@ -568,12 +583,10 @@
 				11,
 				12,
 				13,
-				78,
-				79,
-				80,
-				81,
-				82,
-				83,
+				14,
+				15,
+				16,
+				17,
 				84,
 				85,
 				86,
@@ -583,27 +596,35 @@
 				90,
 				91,
 				92,
+				93,
 				94,
+				95,
+				96,
+				97,
 				98,
 				99,
-				118,
-				119,
-				121,
-				122,
-				123,
-				124,
-				125
+				101,
+				105,
+				106,
+				125,
+				126,
+				128,
+				129,
+				130,
+				131,
+				132,
+				134
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				14,
 				18,
-				49,
-				77,
-				126
+				22,
+				53,
+				83,
+				135
 			]
 		}
 	],
@@ -612,6 +633,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Core/Inc/FreeRTOSConfig.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/dma.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -633,6 +659,17 @@
 			"backtrace" : 1,
 			"path" : "Core/Inc/stm32f4xx_it.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/usart.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/dma.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
@@ -686,6 +723,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/system_stm32f4xx.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/usart.c",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -961,6 +1004,11 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h",
 			"sourceGroupIndex" : 0
 		},
@@ -997,6 +1045,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -1097,6 +1150,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1272,6 +1331,17 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Middlewares/Third_Party/FreeRTOS/Source/timers.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Task/Inc/DBUS_Task.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Task/Src/DBUS_Task.c",
 			"sourceGroupIndex" : 1
 		},
 		{

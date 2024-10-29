@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usart.h"
+#include "DBUS_Task.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -53,7 +54,9 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern uint8_t sbus_rx_buffer[18u];
+extern CtrlData RC_CtrlData;
+extern int f;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
