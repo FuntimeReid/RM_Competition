@@ -25,7 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usart.h"
+#include "DBUS_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,6 +55,18 @@ const osThreadAttr_t defaultTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for DBUSTasK */
+osThreadId_t DBUSTasKHandle;
+const osThreadAttr_t DBUSTasK_attributes = {
+  .name = "DBUSTasK",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for DBUS_Sem */
+osSemaphoreId_t DBUS_SemHandle;
+const osSemaphoreAttr_t DBUS_Sem_attributes = {
+  .name = "DBUS_Sem"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -61,6 +74,7 @@ const osThreadAttr_t defaultTask_attributes = {
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
+void StartDBUSTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -78,6 +92,10 @@ void MX_FREERTOS_Init(void) {
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
+  /* Create the semaphores(s) */
+  /* creation of DBUS_Sem */
+  DBUS_SemHandle = osSemaphoreNew(1, 1, &DBUS_Sem_attributes);
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -93,6 +111,9 @@ void MX_FREERTOS_Init(void) {
   /* Create the thread(s) */
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+
+  /* creation of DBUSTasK */
+  DBUSTasKHandle = osThreadNew(StartDBUSTask, NULL, &DBUSTasK_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -120,6 +141,36 @@ void StartDefaultTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_StartDBUSTask */
+/**
+* @brief Function implementing the DBUSTasK thread.
+* @param argument: Not used
+* @retval None
+*/
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  osSemaphoreRelease(DBUSTasKHandle);
+  RemoteDataProcess(sbus_rx_buffer);
+}
+/* USER CODE END Header_StartDBUSTask */
+void StartDBUSTask(void *argument)
+{
+  /* USER CODE BEGIN StartDBUSTask */
+  osStatus_t DBUS_rx_return = osOK;
+  DBUS_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    DBUS_rx_return = osSemaphoreAcquire(DBUS_SemHandle, osWaitForever);
+    if(DBUS_rx_return == osOK)
+    {
+      DBUS_Task();
+    }
+    osDelay(1);
+  }
+  /* USER CODE END StartDBUSTask */
 }
 
 /* Private application code --------------------------------------------------*/
