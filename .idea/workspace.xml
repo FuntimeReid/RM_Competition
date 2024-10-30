@@ -23,29 +23,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="CAN1发送">
-      <change afterPath="$PROJECT_DIR$/Driver/Inc/GM6020Ctrl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Driver/Inc/M2006.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Driver/Inc/PID.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Driver/Src/GM6020Ctrl.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Driver/Src/M2006.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Driver/Src/PID.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Inc/PID_Task.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Src/PID_Task.c" afterDir="false" />
+    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="3508和2006初步调参">
+      <change afterPath="$PROJECT_DIR$/Task/Inc/Chassis_Task.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Inc/Door_Task.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Inc/Shift_Task.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Src/Chassis_Task.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Src/Door_Task.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Src/Shift_Task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Inc/ChassisCtrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Inc/ChassisCtrl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Src/ChassisCtrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Src/ChassisCtrl.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RM_Competition.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/RM_Competition.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Inc/CAN_Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/CAN_Task.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Inc/DBUS_Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/DBUS_Task.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/CAN_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/CAN_Task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/DBUS_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/DBUS_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-61f8ad895f1b7989ed27.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-30T03-45-22-0036.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-RM_Competition.elf-Debug-7a27d897466bd3c72a02.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Src/PID_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/PID_Task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-c681b76ce4d85c077faf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-30T07-21-18-0375.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-RM_Competition.elf-Debug-f80131178377ab069892.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -53,10 +49,8 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/ChassisCtrl.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/ChassisCtrl.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.hex" afterDir="false" />
@@ -133,20 +127,20 @@
       <recent name="E:\RM\CubeMx\RM_Competition\Driver\Inc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\RM\CubeMx\RM_Competition\Driver\Inc" />
       <recent name="E:\RM\CubeMx\RM_Competition\Task\Inc" />
+      <recent name="E:\RM\CubeMx\RM_Competition\Driver\Inc" />
       <recent name="E:\RM\CubeMx\RM_Competition\Core\Src" />
       <recent name="E:\RM\CubeMx\RM_Competition\Driver\Src" />
       <recent name="E:\RM\CubeMx\RM_Competition" />
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD RM_Competition">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="RM_Competition.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RM_Competition" TARGET_NAME="RM_Competition.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RM_Competition" RUN_TARGET_NAME="RM_Competition.elf">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RM_Competition.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RM_Competition" TARGET_NAME="RM_Competition.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RM_Competition" RUN_TARGET_NAME="RM_Competition.elf">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -196,7 +190,18 @@
       <workItem from="1730267275330" duration="1155000" />
       <workItem from="1730268468318" duration="93000" />
       <workItem from="1730268586474" duration="4111000" />
-      <workItem from="1730272830724" duration="1278000" />
+      <workItem from="1730272830724" duration="4514000" />
+      <workItem from="1730279168679" duration="27000" />
+      <workItem from="1730279310640" duration="50000" />
+      <workItem from="1730279425274" duration="20000" />
+      <workItem from="1730279460615" duration="299000" />
+      <workItem from="1730279814316" duration="92000" />
+      <workItem from="1730279911683" duration="23000" />
+      <workItem from="1730279954832" duration="811000" />
+      <workItem from="1730280817191" duration="385000" />
+      <workItem from="1730281304690" duration="23000" />
+      <workItem from="1730281345310" duration="1943000" />
+      <workItem from="1730283312588" duration="1051000" />
     </task>
     <task id="LOCAL-00001" summary="遥控器解算">
       <option name="closed" value="true" />
@@ -222,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730260382598</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3508和2006初步调参">
+      <option name="closed" value="true" />
+      <created>1730274371125</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730274371125</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +261,7 @@
     <MESSAGE value="遥控器解算" />
     <MESSAGE value="CAN1接收" />
     <MESSAGE value="CAN1发送" />
-    <option name="LAST_COMMIT_MESSAGE" value="CAN1发送" />
+    <MESSAGE value="3508和2006初步调参" />
+    <option name="LAST_COMMIT_MESSAGE" value="3508和2006初步调参" />
   </component>
 </project>

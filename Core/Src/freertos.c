@@ -29,6 +29,8 @@
 #include "DBUS_Task.h"
 #include "CAN_Task.h"
 #include "PID_Task.h"
+#include "Chassis_Task.h"
+#include "Shift_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,6 +80,34 @@ const osThreadAttr_t PIDTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for DoorTask */
+osThreadId_t DoorTaskHandle;
+const osThreadAttr_t DoorTask_attributes = {
+  .name = "DoorTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for ShiftTask */
+osThreadId_t ShiftTaskHandle;
+const osThreadAttr_t ShiftTask_attributes = {
+  .name = "ShiftTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for ChassisTask */
+osThreadId_t ChassisTaskHandle;
+const osThreadAttr_t ChassisTask_attributes = {
+  .name = "ChassisTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for PitchTask */
+osThreadId_t PitchTaskHandle;
+const osThreadAttr_t PitchTask_attributes = {
+  .name = "PitchTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -87,6 +117,21 @@ const osSemaphoreAttr_t DBUS_Sem_attributes = {
 osSemaphoreId_t CAN_SemHandle;
 const osSemaphoreAttr_t CAN_Sem_attributes = {
   .name = "CAN_Sem"
+};
+/* Definitions for Shift_Sem */
+osSemaphoreId_t Shift_SemHandle;
+const osSemaphoreAttr_t Shift_Sem_attributes = {
+  .name = "Shift_Sem"
+};
+/* Definitions for Pitch_Sem */
+osSemaphoreId_t Pitch_SemHandle;
+const osSemaphoreAttr_t Pitch_Sem_attributes = {
+  .name = "Pitch_Sem"
+};
+/* Definitions for Chassis_Sem */
+osSemaphoreId_t Chassis_SemHandle;
+const osSemaphoreAttr_t Chassis_Sem_attributes = {
+  .name = "Chassis_Sem"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,6 +143,10 @@ void StartDefaultTask(void *argument);
 void StartDBUSTask(void *argument);
 void StartCANTask(void *argument);
 void StartPIDTask(void *argument);
+void StartDoorTask(void *argument);
+void StartShiftTask(void *argument);
+void StartChassisTask(void *argument);
+void StartPitchTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -121,6 +170,15 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of CAN_Sem */
   CAN_SemHandle = osSemaphoreNew(1, 1, &CAN_Sem_attributes);
+
+  /* creation of Shift_Sem */
+  Shift_SemHandle = osSemaphoreNew(1, 1, &Shift_Sem_attributes);
+
+  /* creation of Pitch_Sem */
+  Pitch_SemHandle = osSemaphoreNew(1, 1, &Pitch_Sem_attributes);
+
+  /* creation of Chassis_Sem */
+  Chassis_SemHandle = osSemaphoreNew(1, 1, &Chassis_Sem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -146,6 +204,18 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of PIDTask */
   PIDTaskHandle = osThreadNew(StartPIDTask, NULL, &PIDTask_attributes);
+
+  /* creation of DoorTask */
+  DoorTaskHandle = osThreadNew(StartDoorTask, NULL, &DoorTask_attributes);
+
+  /* creation of ShiftTask */
+  ShiftTaskHandle = osThreadNew(StartShiftTask, NULL, &ShiftTask_attributes);
+
+  /* creation of ChassisTask */
+  ChassisTaskHandle = osThreadNew(StartChassisTask, NULL, &ChassisTask_attributes);
+
+  /* creation of PitchTask */
+  PitchTaskHandle = osThreadNew(StartPitchTask, NULL, &PitchTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -198,6 +268,8 @@ void StartDBUSTask(void *argument)
     if(DBUS_rx_return == osOK)
     {
       DBUS_Task();
+      osSemaphoreRelease(Chassis_SemHandle);
+      osSemaphoreRelease(Pitch_SemHandle);
     }
     osDelay(1);
   }
@@ -252,6 +324,85 @@ void StartPIDTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartPIDTask */
+}
+
+/* USER CODE BEGIN Header_StartDoorTask */
+/**
+* @brief Function implementing the DoorTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDoorTask */
+void StartDoorTask(void *argument)
+{
+  /* USER CODE BEGIN StartDoorTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartDoorTask */
+}
+
+/* USER CODE BEGIN Header_StartShiftTask */
+/**
+* @brief Function implementing the ShiftTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartShiftTask */
+void StartShiftTask(void *argument)
+{
+  /* USER CODE BEGIN StartShiftTask */
+  Shift_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartShiftTask */
+}
+
+/* USER CODE BEGIN Header_StartChassisTask */
+/**
+* @brief Function implementing the ChassisTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartChassisTask */
+void StartChassisTask(void *argument)
+{
+  /* USER CODE BEGIN StartChassisTask */
+  osStatus_t chassis_return = osOK;
+  /* Infinite loop */
+  for(;;)
+  {
+    chassis_return = osSemaphoreAcquire(Chassis_SemHandle, osWaitForever);
+    if(chassis_return == osOK)
+    {
+      Chassis_Task();
+    }
+    osDelay(1);
+  }
+  /* USER CODE END StartChassisTask */
+}
+
+/* USER CODE BEGIN Header_StartPitchTask */
+/**
+* @brief Function implementing the PitchTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartPitchTask */
+void StartPitchTask(void *argument)
+{
+  /* USER CODE BEGIN StartPitchTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartPitchTask */
 }
 
 /* Private application code --------------------------------------------------*/

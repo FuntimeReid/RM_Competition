@@ -22,6 +22,7 @@ void CH_Return_Zero()
     RC_CtrlData.rc.ch1 -= 1024;
     RC_CtrlData.rc.ch2 -= 1024;
     RC_CtrlData.rc.ch3 -= 1024;
+    RC_CtrlData.rc.ch4 -= 1024;
 }
 
 void RemoteDataProcess(uint8_t *pData)
@@ -47,4 +48,6 @@ void RemoteDataProcess(uint8_t *pData)
     RC_CtrlData.mouse.press_r = pData[13];
 
     RC_CtrlData.key.v = ((int16_t)pData[14]);
+
+    RC_CtrlData.rc.ch4 = (((int16_t)pData[16]) | ((int16_t)pData[17]) << 8) & 0x07FF;
 }

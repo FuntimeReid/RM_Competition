@@ -21,6 +21,7 @@
 #include "cmsis_os.h"
 #include "can.h"
 #include "dma.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -94,7 +95,10 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART2_UART_Init();
   MX_CAN1_Init();
+  MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+  //__HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_1, 1000);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -112,6 +116,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

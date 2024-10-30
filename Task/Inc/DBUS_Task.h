@@ -12,6 +12,7 @@ typedef struct
         int16_t ch1;
         int16_t ch2;
         int16_t ch3;
+        int16_t ch4;
         int16_t s1;
         int16_t s2;
     }rc;
