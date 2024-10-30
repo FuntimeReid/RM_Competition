@@ -28,6 +28,7 @@
 #include "usart.h"
 #include "DBUS_Task.h"
 #include "CAN_Task.h"
+#include "PID_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,6 +71,13 @@ const osThreadAttr_t CANTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for PIDTask */
+osThreadId_t PIDTaskHandle;
+const osThreadAttr_t PIDTask_attributes = {
+  .name = "PIDTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -89,6 +97,7 @@ const osSemaphoreAttr_t CAN_Sem_attributes = {
 void StartDefaultTask(void *argument);
 void StartDBUSTask(void *argument);
 void StartCANTask(void *argument);
+void StartPIDTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -134,6 +143,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of CANTask */
   CANTaskHandle = osThreadNew(StartCANTask, NULL, &CANTask_attributes);
+
+  /* creation of PIDTask */
+  PIDTaskHandle = osThreadNew(StartPIDTask, NULL, &PIDTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -214,11 +226,32 @@ void StartCANTask(void *argument)
     CAN_rx_return = osSemaphoreAcquire(CAN_SemHandle, osWaitForever);
     if(CAN_rx_return == osOK)
     {
-      CAN_Task();
+      CAN_RX_Task();
     }
+    CAN_Task();
     osDelay(1);
   }
   /* USER CODE END StartCANTask */
+}
+
+/* USER CODE BEGIN Header_StartPIDTask */
+/**
+* @brief Function implementing the PIDTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartPIDTask */
+void StartPIDTask(void *argument)
+{
+  /* USER CODE BEGIN StartPIDTask */
+  PID_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    PID_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartPIDTask */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -55,12 +55,6 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-extern uint8_t sbus_rx_buffer[18u];
-extern CtrlData RC_CtrlData;
-extern uint8_t CAN_rx_data[8];
-extern motor_measure_t motor_chassis[2];
-extern int f;
-extern CAN_RxHeaderTypeDef CAN_rx_header;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

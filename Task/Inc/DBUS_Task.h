@@ -33,6 +33,9 @@ typedef struct
     uint16_t resc;
 }CtrlData;
 
+extern uint8_t sbus_rx_buffer[18u];
+extern CtrlData RC_CtrlData;
+
 void RemoteDataProcess(uint8_t *pData);
 
 void CH_Return_Zero();

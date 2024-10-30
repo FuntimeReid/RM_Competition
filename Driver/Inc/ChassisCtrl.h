@@ -22,4 +22,13 @@ typedef struct
     int16_t last_ecd;
 }motor_measure_t;
 
+typedef struct
+{
+    int16_t target_velocity;
+    int16_t current;
+}chassis_target_state_t;
+
+extern motor_measure_t motor_chassis[2];
+extern chassis_target_state_t chassis_target_state[2];
+
 #endif //CHASSISCTRL_H

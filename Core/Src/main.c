@@ -47,12 +47,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t sbus_rx_buffer[RC_FRAME_LENGTH];//DMA接收
-CtrlData RC_CtrlData;//遥控器解算后数据
-uint8_t CAN_rx_data[8];//CAN接收数据
-CAN_RxHeaderTypeDef CAN_rx_header;//CAN接收
-motor_measure_t motor_chassis[2];//3508返回数据
-int f;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

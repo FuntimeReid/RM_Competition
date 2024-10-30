@@ -1,7 +1,9 @@
 
 #include "DBUS_Task.h"
 #include "usart.h"
-#include "main.h"
+
+uint8_t sbus_rx_buffer[RC_FRAME_LENGTH];//DMA接收
+CtrlData RC_CtrlData;//遥控器解算后数据
 
 void DBUS_Init()
 {
