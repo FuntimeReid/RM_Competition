@@ -19,14 +19,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "can.h"
 #include "dma.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
-#include "LED.h"
 
 /* USER CODE END Includes */
 
@@ -48,8 +47,12 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t sbus_rx_buffer[RC_FRAME_LENGTH];
-CtrlData RC_CtrlData;
+uint8_t sbus_rx_buffer[RC_FRAME_LENGTH];//DMA接收
+CtrlData RC_CtrlData;//遥控器解算后数据
+uint8_t CAN_rx_data[8];//CAN接收数据
+CAN_RxHeaderTypeDef CAN_rx_header;//CAN接收
+motor_measure_t motor_chassis[2];//3508返回数据
+int f;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,10 +99,8 @@ int main(void)
   MX_DMA_Init();
   MX_USART3_UART_Init();
   MX_USART2_UART_Init();
+  MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
-
-  LED_OFF();
-
   /* USER CODE END 2 */
 
   /* Init scheduler */

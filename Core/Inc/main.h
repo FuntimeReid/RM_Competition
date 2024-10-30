@@ -33,6 +33,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "usart.h"
 #include "DBUS_Task.h"
+#include "ChassisCtrl.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -56,16 +57,13 @@ void Error_Handler(void);
 /* USER CODE BEGIN EFP */
 extern uint8_t sbus_rx_buffer[18u];
 extern CtrlData RC_CtrlData;
+extern uint8_t CAN_rx_data[8];
+extern motor_measure_t motor_chassis[2];
 extern int f;
+extern CAN_RxHeaderTypeDef CAN_rx_header;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_R_Pin GPIO_PIN_12
-#define LED_R_GPIO_Port GPIOH
-#define LED_G_Pin GPIO_PIN_11
-#define LED_G_GPIO_Port GPIOH
-#define LED_B_Pin GPIO_PIN_10
-#define LED_B_GPIO_Port GPIOH
 
 /* USER CODE BEGIN Private defines */
 

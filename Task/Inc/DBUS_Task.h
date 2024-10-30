@@ -35,6 +35,8 @@ typedef struct
 
 void RemoteDataProcess(uint8_t *pData);
 
+void CH_Return_Zero();
+
 void DBUS_Init();
 
 void DBUS_Task();

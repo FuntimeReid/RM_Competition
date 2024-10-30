@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "usart.h"
 #include "DBUS_Task.h"
+#include "CAN_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,10 +63,22 @@ const osThreadAttr_t DBUSTasK_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for CANTask */
+osThreadId_t CANTaskHandle;
+const osThreadAttr_t CANTask_attributes = {
+  .name = "CANTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
   .name = "DBUS_Sem"
+};
+/* Definitions for CAN_Sem */
+osSemaphoreId_t CAN_SemHandle;
+const osSemaphoreAttr_t CAN_Sem_attributes = {
+  .name = "CAN_Sem"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,6 +88,7 @@ const osSemaphoreAttr_t DBUS_Sem_attributes = {
 
 void StartDefaultTask(void *argument);
 void StartDBUSTask(void *argument);
+void StartCANTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -96,6 +110,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of DBUS_Sem */
   DBUS_SemHandle = osSemaphoreNew(1, 1, &DBUS_Sem_attributes);
 
+  /* creation of CAN_Sem */
+  CAN_SemHandle = osSemaphoreNew(1, 1, &CAN_Sem_attributes);
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -114,6 +131,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of DBUSTasK */
   DBUSTasKHandle = osThreadNew(StartDBUSTask, NULL, &DBUSTasK_attributes);
+
+  /* creation of CANTask */
+  CANTaskHandle = osThreadNew(StartCANTask, NULL, &CANTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -151,8 +171,7 @@ void StartDefaultTask(void *argument)
 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  osSemaphoreRelease(DBUSTasKHandle);
-  RemoteDataProcess(sbus_rx_buffer);
+  osSemaphoreRelease(DBUS_SemHandle);
 }
 /* USER CODE END Header_StartDBUSTask */
 void StartDBUSTask(void *argument)
@@ -171,6 +190,35 @@ void StartDBUSTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartDBUSTask */
+}
+
+/* USER CODE BEGIN Header_StartCANTask */
+/**
+* @brief Function implementing the CANTask thread.
+* @param argument: Not used
+* @retval None
+*/
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+  HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &CAN_rx_header, CAN_rx_data);
+  osSemaphoreRelease(CAN_SemHandle);
+}
+/* USER CODE END Header_StartCANTask */
+void StartCANTask(void *argument)
+{
+  /* USER CODE BEGIN StartCANTask */
+  osStatus CAN_rx_return = osOK;
+  /* Infinite loop */
+  for(;;)
+  {
+    CAN_rx_return = osSemaphoreAcquire(CAN_SemHandle, osWaitForever);
+    if(CAN_rx_return == osOK)
+    {
+      CAN_Task();
+    }
+    osDelay(1);
+  }
+  /* USER CODE END StartCANTask */
 }
 
 /* Private application code --------------------------------------------------*/
