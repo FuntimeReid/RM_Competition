@@ -11,7 +11,7 @@ void PID_Task_Init()
     PID_Init(&chassis_pid_velocity,5,0.06,0);
 
     PID_Init(&GM6020_pid_location,1,0,0);
-    PID_Init(&GM6020_pid_velocity,30,0.3,0);
+    PID_Init(&GM6020_pid_velocity,30,0,0);
     PID_Init(&GM6020_pid_torque,1.4,0,0);
 
     PID_Init(&M2006_pid_location,0.3,0,0.5);

@@ -9,8 +9,7 @@ void Chassis_Task()
 {
     if(RC_CtrlData.rc.ch3 > -900)
     {
-        chassis_target_state[0].target_velocity = RC_CtrlData.rc.ch3 * chassis_coefficient;
-        chassis_target_state[1].target_velocity = RC_CtrlData.rc.ch3 * chassis_coefficient;
+        chassis_target_state[0].target_velocity = RC_CtrlData.rc.ch3 * shift_coefficient.chassis;
+        chassis_target_state[1].target_velocity = RC_CtrlData.rc.ch3 * shift_coefficient.chassis;
     }
-
 }

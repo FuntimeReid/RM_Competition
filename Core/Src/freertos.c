@@ -31,6 +31,9 @@
 #include "PID_Task.h"
 #include "Chassis_Task.h"
 #include "Shift_Task.h"
+#include "GM6020Ctrl.h"
+#include "ChassisCtrl.h"
+#include "M2006.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -133,6 +136,11 @@ osSemaphoreId_t Chassis_SemHandle;
 const osSemaphoreAttr_t Chassis_Sem_attributes = {
   .name = "Chassis_Sem"
 };
+/* Definitions for Outage_Sem */
+osSemaphoreId_t Outage_SemHandle;
+const osSemaphoreAttr_t Outage_Sem_attributes = {
+  .name = "Outage_Sem"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -179,6 +187,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of Chassis_Sem */
   Chassis_SemHandle = osSemaphoreNew(1, 1, &Chassis_Sem_attributes);
+
+  /* creation of Outage_Sem */
+  Outage_SemHandle = osSemaphoreNew(1, 1, &Outage_Sem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -253,6 +264,7 @@ void StartDefaultTask(void *argument)
 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+  RemoteDataProcess(sbus_rx_buffer);
   osSemaphoreRelease(DBUS_SemHandle);
 }
 /* USER CODE END Header_StartDBUSTask */
@@ -285,21 +297,32 @@ void StartDBUSTask(void *argument)
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &CAN_rx_header, CAN_rx_data);
-  osSemaphoreRelease(CAN_SemHandle);
+  switch (CAN_rx_header.StdId)
+  {
+    case 0x201:
+    {
+      Get_M2006_Measure(&M2006_measure[0],CAN_rx_data);
+      break;
+    }
+    case 0x203:
+    {
+      Get_Motor_Measure(&motor_chassis[0],CAN_rx_data);
+      break;
+    }
+    case 0x207:
+    {
+      Get_GM6020_Measure(&GM6020_measure,CAN_rx_data);
+      break;
+    }
+  }
 }
 /* USER CODE END Header_StartCANTask */
 void StartCANTask(void *argument)
 {
   /* USER CODE BEGIN StartCANTask */
-  osStatus CAN_rx_return = osOK;
   /* Infinite loop */
   for(;;)
   {
-    CAN_rx_return = osSemaphoreAcquire(CAN_SemHandle, osWaitForever);
-    if(CAN_rx_return == osOK)
-    {
-      CAN_RX_Task();
-    }
     CAN_Task();
     osDelay(1);
   }
@@ -358,6 +381,7 @@ void StartShiftTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    Shift_Task();
     osDelay(1);
   }
   /* USER CODE END StartShiftTask */
@@ -400,6 +424,10 @@ void StartPitchTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    if(outage_tim <= 200)
+    {
+      outage_tim++;
+    }
     osDelay(1);
   }
   /* USER CODE END StartPitchTask */

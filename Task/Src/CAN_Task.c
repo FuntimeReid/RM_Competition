@@ -9,31 +9,13 @@ uint8_t can_send_data[8];//CAN发送数据
 uint8_t CAN_rx_data[8];//CAN接收数据
 CAN_RxHeaderTypeDef CAN_rx_header;//CAN接收
 
-void CAN_RX_Task()
-{
-    switch (CAN_rx_header.StdId)
-    {
-        case 0x201:
-        {
-            Get_M2006_Measure(&M2006_measure[0],CAN_rx_data);
-            break;
-        }
-        case 0x203:
-        {
-            Get_Motor_Measure(&motor_chassis[0],CAN_rx_data);
-            break;
-        }
-        case 0x207:
-        {
-            Get_GM6020_Measure(&GM6020_measure,CAN_rx_data);
-        }
-    }
-}
-
 void CAN_Task()
 {
-    CAN_SendMessage(&hcan1,0x200,M2006_state[0].current,0,chassis_target_state[0].current,0);
-    CAN_SendMessage(&hcan1,0x1FF,0,0,GM6020_state.current,0);
+    if(outage_tim <= 200)
+    {
+        CAN_SendMessage(&hcan1,0x200,M2006_state[0].current,0,chassis_target_state[0].current,0);
+        CAN_SendMessage(&hcan1,0x1FF,0,0,GM6020_state.current,0);
+    }
 }
 
 void CAN_SendMessage(CAN_HandleTypeDef *hcan,uint32_t StdId,int16_t message1,int16_t message2,int16_t message3,int16_t message4)
