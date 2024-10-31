@@ -34,6 +34,8 @@
 #include "GM6020Ctrl.h"
 #include "ChassisCtrl.h"
 #include "M2006.h"
+#include "Outage_Task.h"
+#include "Door_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,6 +113,13 @@ const osThreadAttr_t PitchTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for OutageTask */
+osThreadId_t OutageTaskHandle;
+const osThreadAttr_t OutageTask_attributes = {
+  .name = "OutageTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -155,6 +164,7 @@ void StartDoorTask(void *argument);
 void StartShiftTask(void *argument);
 void StartChassisTask(void *argument);
 void StartPitchTask(void *argument);
+void StartOutageTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -227,6 +237,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of PitchTask */
   PitchTaskHandle = osThreadNew(StartPitchTask, NULL, &PitchTask_attributes);
+
+  /* creation of OutageTask */
+  OutageTaskHandle = osThreadNew(StartOutageTask, NULL, &OutageTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -359,9 +372,11 @@ void StartPIDTask(void *argument)
 void StartDoorTask(void *argument)
 {
   /* USER CODE BEGIN StartDoorTask */
+  Door_Task_Init();
   /* Infinite loop */
   for(;;)
   {
+    Door_Task();
     osDelay(1);
   }
   /* USER CODE END StartDoorTask */
@@ -424,13 +439,29 @@ void StartPitchTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    if(outage_tim <= 200)
-    {
-      outage_tim++;
-    }
     osDelay(1);
   }
   /* USER CODE END StartPitchTask */
+}
+
+/* USER CODE BEGIN Header_StartOutageTask */
+/**
+* @brief Function implementing the OutageTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartOutageTask */
+void StartOutageTask(void *argument)
+{
+  /* USER CODE BEGIN StartOutageTask */
+  Outage_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    Outage_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartOutageTask */
 }
 
 /* Private application code --------------------------------------------------*/

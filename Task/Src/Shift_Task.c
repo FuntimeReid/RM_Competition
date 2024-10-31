@@ -10,6 +10,7 @@ uint8_t last_s1;
 
 void Shift_Task_Init()
 {
+    shift_coefficient.if_fast = true;
     shift_coefficient.chassis = 10;
     last_s1 = 3;
 }
@@ -23,7 +24,10 @@ void Shift_Task()
     }
     else
     {
-        shift_tim++;
+        if(s1_time != 0)
+        {
+            shift_tim++;
+        }
         if(last_s1 != RC_CtrlData.rc.s1)
         {
             last_s1 = RC_CtrlData.rc.s1;

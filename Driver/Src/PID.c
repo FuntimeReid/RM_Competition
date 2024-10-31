@@ -5,7 +5,6 @@ pid_t chassis_pid_velocity;
 
 pid_t GM6020_pid_location;
 pid_t GM6020_pid_velocity;
-pid_t GM6020_pid_torque;
 
 pid_t M2006_pid_location;
 pid_t M2006_pid_velocity;

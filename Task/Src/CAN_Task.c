@@ -4,6 +4,7 @@
 #include "can.h"
 #include "GM6020Ctrl.h"
 #include "M2006.h"
+#include "Outage_Task.h"
 
 uint8_t can_send_data[8];//CAN发送数据
 uint8_t CAN_rx_data[8];//CAN接收数据

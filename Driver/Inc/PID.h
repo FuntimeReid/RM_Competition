@@ -19,7 +19,6 @@ extern pid_t chassis_pid_velocity;
 
 extern pid_t GM6020_pid_location;
 extern pid_t GM6020_pid_velocity;
-extern pid_t GM6020_pid_torque;
 
 extern pid_t M2006_pid_location;
 extern pid_t M2006_pid_velocity;

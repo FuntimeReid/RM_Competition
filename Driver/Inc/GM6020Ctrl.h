@@ -16,7 +16,6 @@ typedef struct
 typedef struct
 {
     int32_t target_velocity;
-    int32_t target_torque;
     int32_t current;
 }GM6020_state_t;
 

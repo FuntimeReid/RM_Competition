@@ -36,7 +36,6 @@ typedef struct
 
 extern uint8_t sbus_rx_buffer[18u];
 extern CtrlData RC_CtrlData;
-extern uint16_t outage_tim;
 
 void RemoteDataProcess(uint8_t *pData);
 

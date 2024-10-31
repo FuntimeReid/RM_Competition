@@ -1,10 +1,10 @@
 
 #include "DBUS_Task.h"
 #include "usart.h"
+#include "Outage_Task.h"
 
 uint8_t sbus_rx_buffer[RC_FRAME_LENGTH];//DMA接收
 CtrlData RC_CtrlData;//遥控器解算后数据
-uint16_t outage_tim;
 
 void DBUS_Init()
 {

@@ -97,8 +97,8 @@ int main(void)
   MX_CAN1_Init();
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
-  //__HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_1, 1000);
+
+  //
   /* USER CODE END 2 */
 
   /* Init scheduler */
