@@ -12,10 +12,15 @@ CAN_RxHeaderTypeDef CAN_rx_header;//CAN接收
 
 void CAN_Task()
 {
-    if(outage_tim <= 200)
+    if(outage_tim <= 100)
     {
         CAN_SendMessage(&hcan1,0x200,M2006_state[0].current,0,chassis_target_state[0].current,0);
         CAN_SendMessage(&hcan1,0x1FF,0,0,GM6020_state.current,0);
+    }
+    else
+    {
+        CAN_SendMessage(&hcan1,0x200,0,0,0,0);
+        CAN_SendMessage(&hcan1,0x1FF,0,0,0,0);
     }
 }
 

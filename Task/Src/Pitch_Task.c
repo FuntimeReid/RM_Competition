@@ -2,6 +2,7 @@
 #include "Pitch_Task.h"
 
 #include "DBUS_Task.h"
+#include "Outage_Task.h"
 #include "PID.h"
 
 void Pitch_Task_Init()

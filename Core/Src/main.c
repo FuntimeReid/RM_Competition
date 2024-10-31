@@ -97,8 +97,6 @@ int main(void)
   MX_CAN1_Init();
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
-
-  //
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -116,7 +114,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,6 +1,8 @@
 
 #include "PID.h"
 
+#include "Outage_Task.h"
+
 pid_t chassis_pid_velocity;
 
 pid_t GM6020_pid_location;
@@ -65,7 +67,14 @@ int64_t PID_Calculate(pid_t *pid,int16_t target,int16_t now,uint16_t last,int16_
 
     if(pid->error_now < 500)
     {
-        pid->error_all += pid->error_now * 0.1;
+        if(outage_tim <= 100)
+        {
+            pid->error_all += pid->error_now * 0.1;
+        }
+        else
+        {
+            pid->error_all = 0;
+        }
     }//积分分离
 
     pid->error_all = Limit(limit_i,pid->error_all);

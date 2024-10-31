@@ -8,8 +8,8 @@ void Door_Task_Init();
 
 void Door_Task();
 
-void Door_Ctrl(int16_t compare);
+void Door_Ctrl(int16_t pulse);
 
-extern uint8_t door_tim;
+extern uint32_t door_tim;
 
 #endif //DOOR_TASK_H

@@ -167,11 +167,6 @@ osSemaphoreId_t Pitch_SemHandle;
 const osSemaphoreAttr_t Pitch_Sem_attributes = {
   .name = "Pitch_Sem"
 };
-/* Definitions for Shovel_Sem */
-osSemaphoreId_t Shovel_SemHandle;
-const osSemaphoreAttr_t Shovel_Sem_attributes = {
-  .name = "Shovel_Sem"
-};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -224,9 +219,6 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of Pitch_Sem */
   Pitch_SemHandle = osSemaphoreNew(1, 1, &Pitch_Sem_attributes);
-
-  /* creation of Shovel_Sem */
-  Shovel_SemHandle = osSemaphoreNew(1, 1, &Shovel_Sem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -327,7 +319,6 @@ void StartDBUSTask(void *argument)
     {
       DBUS_Task();
       osSemaphoreRelease(Pitch_SemHandle);
-      osSemaphoreRelease(Shovel_SemHandle);
       osSemaphoreRelease(Chassis_SemHandle);
     }
     osDelay(1);
@@ -534,16 +525,11 @@ void StartLEDTask(void *argument)
 void StartShovelTask(void *argument)
 {
   /* USER CODE BEGIN StartShovelTask */
-  osStatus_t shovel_return = osOK;
   Shovel_Task_Init();
   /* Infinite loop */
   for(;;)
   {
-    shovel_return = osSemaphoreAcquire(Shovel_SemHandle, osWaitForever);
-    if(shovel_return == osOK)
-    {
-      Shovel_Task();
-    }
+    Shovel_Task();
     osDelay(1);
   }
   /* USER CODE END StartShovelTask */
