@@ -8,7 +8,8 @@ void Door_Task_Init();
 
 void Door_Task();
 
-extern uint8_t corotation;
+void Door_Ctrl(int16_t compare);
+
 extern uint8_t door_tim;
 
 #endif //DOOR_TASK_H

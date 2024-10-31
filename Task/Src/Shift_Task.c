@@ -1,7 +1,7 @@
 
 #include "Shift_Task.h"
-
 #include "DBUS_Task.h"
+#include "LED.h"
 
 shift_coefficient_t shift_coefficient;
 uint16_t shift_tim;
@@ -13,6 +13,7 @@ void Shift_Task_Init()
     shift_coefficient.if_fast = true;
     shift_coefficient.chassis = 10;
     last_s1 = 3;
+    LED_RED();
 }
 
 void Shift_Task()
@@ -39,11 +40,13 @@ void Shift_Task()
             {
                 shift_coefficient.if_fast = false;
                 shift_coefficient.chassis = 0.5;
+                LED_GREEN();
             }
             else
             {
                 shift_coefficient.if_fast = true;
                 shift_coefficient.chassis = 10;
+                LED_RED();
             }
             s1_time = 0;
         }

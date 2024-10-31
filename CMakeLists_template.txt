@@ -51,6 +51,7 @@ endif ()
 include_directories(${includes}
     Task/Inc
     Driver/Inc
+    BSP/Inc
 )
 
 add_definitions(${defines})
@@ -58,6 +59,7 @@ add_definitions(${defines})
 file(GLOB_RECURSE SOURCES ${sources}
     "Task/*.*"
     "Driver/*.*"
+    "BSP/*.*"
 )
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})

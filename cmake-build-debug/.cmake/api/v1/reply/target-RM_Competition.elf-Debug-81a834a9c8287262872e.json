@@ -29,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 70,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -41,19 +41,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 66,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 67,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
 				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 57,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
@@ -227,6 +227,10 @@
 				{
 					"backtrace" : 13,
 					"path" : "E:/RM/CubeMx/RM_Competition/Driver/Inc"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "E:/RM/CubeMx/RM_Competition/BSP/Inc"
 				}
 			],
 			"language" : "C",
@@ -240,8 +244,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				9,
-				10,
+				1,
 				11,
 				12,
 				13,
@@ -253,12 +256,12 @@
 				19,
 				20,
 				21,
-				27,
-				28,
+				22,
+				23,
 				29,
 				30,
-				98,
-				99,
+				31,
+				32,
 				100,
 				101,
 				102,
@@ -274,23 +277,28 @@
 				112,
 				113,
 				114,
+				115,
 				116,
-				120,
-				121,
-				140,
-				141,
+				118,
+				122,
+				123,
+				142,
 				143,
-				144,
 				145,
 				146,
 				147,
-				155,
-				156,
-				157,
-				158,
-				159,
+				148,
+				149,
 				160,
-				161
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169
 			]
 		},
 		{
@@ -420,12 +428,16 @@
 				{
 					"backtrace" : 13,
 					"path" : "E:/RM/CubeMx/RM_Competition/Driver/Inc"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "E:/RM/CubeMx/RM_Competition/BSP/Inc"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				22
+				24
 			]
 		}
 	],
@@ -499,7 +511,6 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
 				2,
 				3,
 				4,
@@ -507,15 +518,15 @@
 				6,
 				7,
 				8,
-				23,
-				24,
+				9,
+				10,
 				25,
 				26,
-				31,
-				32,
+				27,
+				28,
 				33,
+				34,
 				35,
-				36,
 				37,
 				38,
 				39,
@@ -544,8 +555,8 @@
 				62,
 				63,
 				64,
+				65,
 				66,
-				67,
 				68,
 				69,
 				70,
@@ -575,12 +586,12 @@
 				94,
 				95,
 				96,
-				115,
+				97,
+				98,
 				117,
-				118,
 				119,
-				122,
-				123,
+				120,
+				121,
 				124,
 				125,
 				126,
@@ -597,22 +608,26 @@
 				137,
 				138,
 				139,
-				142,
-				148,
-				149,
+				140,
+				141,
+				144,
 				150,
 				151,
 				152,
 				153,
-				154
+				154,
+				155,
+				156,
+				157,
+				158,
+				159
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				9,
-				10,
+				1,
 				11,
 				12,
 				13,
@@ -624,12 +639,12 @@
 				19,
 				20,
 				21,
-				27,
-				28,
+				22,
+				23,
 				29,
 				30,
-				98,
-				99,
+				31,
+				32,
 				100,
 				101,
 				102,
@@ -645,39 +660,55 @@
 				112,
 				113,
 				114,
+				115,
 				116,
-				120,
-				121,
-				140,
-				141,
+				118,
+				122,
+				123,
+				142,
 				143,
-				144,
 				145,
 				146,
 				147,
-				155,
-				156,
-				157,
-				158,
-				159,
+				148,
+				149,
 				160,
-				161
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				22,
-				34,
-				65,
-				97,
-				162
+				24,
+				36,
+				67,
+				99,
+				170
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"path" : "Bsp/Inc/LED.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Bsp/Src/LED.c",
+			"sourceGroupIndex" : 1
+		},
 		{
 			"backtrace" : 1,
 			"path" : "Core/Inc/FreeRTOSConfig.h",
@@ -1485,6 +1516,11 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Task/Inc/LED_Task.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Task/Inc/Outage_Task.h",
 			"sourceGroupIndex" : 0
 		},
@@ -1495,7 +1531,17 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Task/Inc/Pitch_Task.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Task/Inc/Shift_Task.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Task/Inc/Shovel_Task.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -1525,6 +1571,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "Task/Src/LED_Task.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "Task/Src/Outage_Task.c",
 			"sourceGroupIndex" : 1
 		},
@@ -1537,7 +1589,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "Task/Src/Pitch_Task.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "Task/Src/Shift_Task.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Task/Src/Shovel_Task.c",
 			"sourceGroupIndex" : 1
 		},
 		{

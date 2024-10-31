@@ -36,6 +36,9 @@
 #include "M2006.h"
 #include "Outage_Task.h"
 #include "Door_Task.h"
+#include "LED_Task.h"
+#include "Pitch_Task.h"
+#include "Shovel_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -120,6 +123,20 @@ const osThreadAttr_t OutageTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for LEDTask */
+osThreadId_t LEDTaskHandle;
+const osThreadAttr_t LEDTask_attributes = {
+  .name = "LEDTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for ShovelTask */
+osThreadId_t ShovelTaskHandle;
+const osThreadAttr_t ShovelTask_attributes = {
+  .name = "ShovelTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -135,20 +152,25 @@ osSemaphoreId_t Shift_SemHandle;
 const osSemaphoreAttr_t Shift_Sem_attributes = {
   .name = "Shift_Sem"
 };
-/* Definitions for Pitch_Sem */
-osSemaphoreId_t Pitch_SemHandle;
-const osSemaphoreAttr_t Pitch_Sem_attributes = {
-  .name = "Pitch_Sem"
+/* Definitions for Outage_Sem */
+osSemaphoreId_t Outage_SemHandle;
+const osSemaphoreAttr_t Outage_Sem_attributes = {
+  .name = "Outage_Sem"
 };
 /* Definitions for Chassis_Sem */
 osSemaphoreId_t Chassis_SemHandle;
 const osSemaphoreAttr_t Chassis_Sem_attributes = {
   .name = "Chassis_Sem"
 };
-/* Definitions for Outage_Sem */
-osSemaphoreId_t Outage_SemHandle;
-const osSemaphoreAttr_t Outage_Sem_attributes = {
-  .name = "Outage_Sem"
+/* Definitions for Pitch_Sem */
+osSemaphoreId_t Pitch_SemHandle;
+const osSemaphoreAttr_t Pitch_Sem_attributes = {
+  .name = "Pitch_Sem"
+};
+/* Definitions for Shovel_Sem */
+osSemaphoreId_t Shovel_SemHandle;
+const osSemaphoreAttr_t Shovel_Sem_attributes = {
+  .name = "Shovel_Sem"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -165,6 +187,8 @@ void StartShiftTask(void *argument);
 void StartChassisTask(void *argument);
 void StartPitchTask(void *argument);
 void StartOutageTask(void *argument);
+void StartLEDTask(void *argument);
+void StartShovelTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -192,14 +216,17 @@ void MX_FREERTOS_Init(void) {
   /* creation of Shift_Sem */
   Shift_SemHandle = osSemaphoreNew(1, 1, &Shift_Sem_attributes);
 
-  /* creation of Pitch_Sem */
-  Pitch_SemHandle = osSemaphoreNew(1, 1, &Pitch_Sem_attributes);
+  /* creation of Outage_Sem */
+  Outage_SemHandle = osSemaphoreNew(1, 1, &Outage_Sem_attributes);
 
   /* creation of Chassis_Sem */
   Chassis_SemHandle = osSemaphoreNew(1, 1, &Chassis_Sem_attributes);
 
-  /* creation of Outage_Sem */
-  Outage_SemHandle = osSemaphoreNew(1, 1, &Outage_Sem_attributes);
+  /* creation of Pitch_Sem */
+  Pitch_SemHandle = osSemaphoreNew(1, 1, &Pitch_Sem_attributes);
+
+  /* creation of Shovel_Sem */
+  Shovel_SemHandle = osSemaphoreNew(1, 1, &Shovel_Sem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -240,6 +267,12 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of OutageTask */
   OutageTaskHandle = osThreadNew(StartOutageTask, NULL, &OutageTask_attributes);
+
+  /* creation of LEDTask */
+  LEDTaskHandle = osThreadNew(StartLEDTask, NULL, &LEDTask_attributes);
+
+  /* creation of ShovelTask */
+  ShovelTaskHandle = osThreadNew(StartShovelTask, NULL, &ShovelTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -293,8 +326,9 @@ void StartDBUSTask(void *argument)
     if(DBUS_rx_return == osOK)
     {
       DBUS_Task();
-      osSemaphoreRelease(Chassis_SemHandle);
       osSemaphoreRelease(Pitch_SemHandle);
+      osSemaphoreRelease(Shovel_SemHandle);
+      osSemaphoreRelease(Chassis_SemHandle);
     }
     osDelay(1);
   }
@@ -436,9 +470,16 @@ void StartChassisTask(void *argument)
 void StartPitchTask(void *argument)
 {
   /* USER CODE BEGIN StartPitchTask */
+  osStatus_t pitch_return = osOK;
+  Pitch_Task_Init();
   /* Infinite loop */
   for(;;)
   {
+    pitch_return = osSemaphoreAcquire(Pitch_SemHandle, osWaitForever);
+    if(pitch_return == osOK)
+    {
+      Pitch_Task();
+    }
     osDelay(1);
   }
   /* USER CODE END StartPitchTask */
@@ -462,6 +503,50 @@ void StartOutageTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartOutageTask */
+}
+
+/* USER CODE BEGIN Header_StartLEDTask */
+/**
+* @brief Function implementing the LEDTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartLEDTask */
+void StartLEDTask(void *argument)
+{
+  /* USER CODE BEGIN StartLEDTask */
+  LED_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartLEDTask */
+}
+
+/* USER CODE BEGIN Header_StartShovelTask */
+/**
+* @brief Function implementing the ShovelTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartShovelTask */
+void StartShovelTask(void *argument)
+{
+  /* USER CODE BEGIN StartShovelTask */
+  osStatus_t shovel_return = osOK;
+  Shovel_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    shovel_return = osSemaphoreAcquire(Shovel_SemHandle, osWaitForever);
+    if(shovel_return == osOK)
+    {
+      Shovel_Task();
+    }
+    osDelay(1);
+  }
+  /* USER CODE END StartShovelTask */
 }
 
 /* Private application code --------------------------------------------------*/
