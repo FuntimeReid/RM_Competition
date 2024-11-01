@@ -39,6 +39,7 @@
 #include "LED_Task.h"
 #include "Pitch_Task.h"
 #include "Shovel_Task.h"
+#include "imu_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -137,6 +138,13 @@ const osThreadAttr_t ShovelTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for IMUTask */
+osThreadId_t IMUTaskHandle;
+const osThreadAttr_t IMUTask_attributes = {
+  .name = "IMUTask",
+  .stack_size = 1024 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -184,6 +192,7 @@ void StartPitchTask(void *argument);
 void StartOutageTask(void *argument);
 void StartLEDTask(void *argument);
 void StartShovelTask(void *argument);
+void StartIMUTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -265,6 +274,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of ShovelTask */
   ShovelTaskHandle = osThreadNew(StartShovelTask, NULL, &ShovelTask_attributes);
+
+  /* creation of IMUTask */
+  IMUTaskHandle = osThreadNew(StartIMUTask, NULL, &IMUTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -533,6 +545,27 @@ void StartShovelTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartShovelTask */
+}
+
+/* USER CODE BEGIN Header_StartIMUTask */
+/**
+* @brief Function implementing the IMUTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartIMUTask */
+void StartIMUTask(void *argument)
+{
+  /* USER CODE BEGIN StartIMUTask */
+
+  IMU_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    IMU_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartIMUTask */
 }
 
 /* Private application code --------------------------------------------------*/

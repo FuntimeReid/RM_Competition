@@ -25,14 +25,14 @@ int64_t Limit(int64_t limit,int64_t target)
     return target;
 }
 
-void PID_Init(pid_t *pid,float kp,float ki,float kd)
+void PID_Ini(pid_t *pid,float kp,float ki,float kd)
 {
     pid->kp = kp;
     pid->ki = ki;
     pid->kd = kd;
 }
 
-int64_t PID_Calculate(pid_t *pid,int16_t target,int16_t now,uint16_t last,int16_t limit_i,int64_t limit_result,bool if_zero_crossing)
+int64_t PID_Calc(pid_t *pid,int16_t target,int16_t now,uint16_t last,int16_t limit_i,int64_t limit_result,bool if_zero_crossing)
 {
     int64_t result = 0;
     if(if_zero_crossing)

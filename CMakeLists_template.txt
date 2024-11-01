@@ -52,6 +52,8 @@ include_directories(${includes}
     Task/Inc
     Driver/Inc
     BSP/Inc
+    Driver/BMI088/Inc
+    Drivers/CMSIS/DSP/Include
 )
 
 add_definitions(${defines})

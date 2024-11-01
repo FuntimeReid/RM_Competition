@@ -53,6 +53,8 @@ include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_
     Task/Inc
     Driver/Inc
     BSP/Inc
+    Driver/BMI088/Inc
+    Drivers/CMSIS/DSP/Include
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx)
