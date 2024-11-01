@@ -705,3 +705,6 @@
 4177	4776	7521533049442360	CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj	f4cc9dbd1ceaa5a1
 4311	4776	7521533050790122	CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj	e4373ea1c0161d33
 4776	5066	7521533055432709	RM_Competition.elf	230a433910e98c6d
+20	146	7521537421754747	CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj	bcdaff28327e24ea
+28	170	7521537421824586	CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj	8245b3df8daa5c79
+170	446	7521537423259879	RM_Competition.elf	230a433910e98c6d

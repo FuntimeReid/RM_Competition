@@ -60,8 +60,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#include "bsp_dwt.h"
-#include "BMI088driver.h"
+
 /* USER CODE END 0 */
 
 /**
@@ -103,8 +102,7 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
-  DWT_Init(168);
-  while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);
+
   /* USER CODE END 2 */
 
   /* Init scheduler */

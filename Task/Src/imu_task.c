@@ -3,6 +3,8 @@
 #include "controller.h"
 #include "QuaternionEKF.h"
 #include "bsp_PWM.h"
+#include "bsp_dwt.h"
+#include "spi.h"
 
 INS_t INS;
 IMU_Param_t IMU_Param;
@@ -21,6 +23,9 @@ static void IMU_Param_Correction(IMU_Param_t *param, float gyro[3], float accel[
 
 void IMU_Init(void)
 {
+    DWT_Init(168);
+    while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);
+
     IMU_Param.scale[X] = 1;
     IMU_Param.scale[Y] = 1;
     IMU_Param.scale[Z] = 1;
