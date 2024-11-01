@@ -14,7 +14,7 @@ void CAN_Task()
 {
     if(outage_tim <= 100)
     {
-        CAN_SendMessage(&hcan1,0x200,M2006_state[0].current,0,chassis_target_state[0].current,0);
+        CAN_SendMessage(&hcan1,0x200,M2006_state[0].current,0,chassis_target_state[0].current,chassis_target_state[1].current);
         CAN_SendMessage(&hcan1,0x1FF,0,0,GM6020_state.current,0);
     }
     else

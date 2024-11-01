@@ -40,6 +40,7 @@
 #include "Pitch_Task.h"
 #include "Shovel_Task.h"
 #include "imu_task.h"
+#include "Slide_Task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -145,6 +146,13 @@ const osThreadAttr_t IMUTask_attributes = {
   .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for SlideTask */
+osThreadId_t SlideTaskHandle;
+const osThreadAttr_t SlideTask_attributes = {
+  .name = "SlideTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -193,6 +201,7 @@ void StartOutageTask(void *argument);
 void StartLEDTask(void *argument);
 void StartShovelTask(void *argument);
 void StartIMUTask(void *argument);
+void StartSlideTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -278,6 +287,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of IMUTask */
   IMUTaskHandle = osThreadNew(StartIMUTask, NULL, &IMUTask_attributes);
 
+  /* creation of SlideTask */
+  SlideTaskHandle = osThreadNew(StartSlideTask, NULL, &SlideTask_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -357,6 +369,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     case 0x203:
     {
       Get_Motor_Measure(&motor_chassis[0],CAN_rx_data);
+      break;
+    }
+    case 0x204:
+    {
+      Get_Motor_Measure(&motor_chassis[1],CAN_rx_data);
       break;
     }
     case 0x207:
@@ -566,6 +583,26 @@ void StartIMUTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartIMUTask */
+}
+
+/* USER CODE BEGIN Header_StartSlideTask */
+/**
+* @brief Function implementing the SlideTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartSlideTask */
+void StartSlideTask(void *argument)
+{
+  /* USER CODE BEGIN StartSlideTask */
+  Slide_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    Slide_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartSlideTask */
 }
 
 /* Private application code --------------------------------------------------*/

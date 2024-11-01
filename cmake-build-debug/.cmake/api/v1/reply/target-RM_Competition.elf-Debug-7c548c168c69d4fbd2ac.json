@@ -578,7 +578,6 @@
 				445,
 				446,
 				447,
-				459,
 				460,
 				461,
 				462,
@@ -588,7 +587,9 @@
 				466,
 				467,
 				468,
-				469
+				469,
+				470,
+				471
 			]
 		},
 		{
@@ -936,7 +937,8 @@
 				455,
 				456,
 				457,
-				458
+				458,
+				459
 			]
 		},
 		{
@@ -1269,7 +1271,6 @@
 				445,
 				446,
 				447,
-				459,
 				460,
 				461,
 				462,
@@ -1279,7 +1280,9 @@
 				466,
 				467,
 				468,
-				469
+				469,
+				470,
+				471
 			]
 		},
 		{
@@ -1291,7 +1294,7 @@
 				331,
 				362,
 				396,
-				470
+				472
 			]
 		}
 	],
@@ -3917,6 +3920,11 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Task/Inc/Slide_Task.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Task/Inc/imu_task.h",
 			"sourceGroupIndex" : 0
 		},
@@ -3978,6 +3986,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Task/Src/Shovel_Task.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Task/Src/Slide_Task.c",
 			"sourceGroupIndex" : 1
 		},
 		{

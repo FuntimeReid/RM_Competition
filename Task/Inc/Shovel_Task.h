@@ -10,4 +10,6 @@ void Shovel_Task();
 
 void Shovel_Ctrl(int16_t pulse);
 
+void Shovel_Pulse_Setting(int16_t pulse);
+
 #endif //SHOVEL_TASK_H
