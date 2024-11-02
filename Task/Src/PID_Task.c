@@ -10,8 +10,8 @@ void PID_Task_Init()
 {
     PID_Ini(&chassis_pid_velocity,5,0.06,0);
 
-    PID_Ini(&GM6020_pid_location,0.15,0,0);
-    PID_Ini(&GM6020_pid_velocity,6,6,0);
+    PID_Ini(&GM6020_pid_location,0.4,0,0);
+    PID_Ini(&GM6020_pid_velocity,8,0,0);
 
     PID_Ini(&M2006_pid_location,0.3,0,0.5);
     PID_Ini(&M2006_pid_velocity,8,0,0);
