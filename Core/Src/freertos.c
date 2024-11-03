@@ -40,6 +40,7 @@
 #include "Pitch_Task.h"
 #include "Shovel_Task.h"
 #include "imu_task.h"
+#include "Lift_Task.h"
 #include "Slide_Task.h"
 /* USER CODE END Includes */
 
@@ -153,6 +154,13 @@ const osThreadAttr_t SlideTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for LiftTask */
+osThreadId_t LiftTaskHandle;
+const osThreadAttr_t LiftTask_attributes = {
+  .name = "LiftTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for DBUS_Sem */
 osSemaphoreId_t DBUS_SemHandle;
 const osSemaphoreAttr_t DBUS_Sem_attributes = {
@@ -202,6 +210,7 @@ void StartLEDTask(void *argument);
 void StartShovelTask(void *argument);
 void StartIMUTask(void *argument);
 void StartSlideTask(void *argument);
+void StartLiftTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -289,6 +298,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of SlideTask */
   SlideTaskHandle = osThreadNew(StartSlideTask, NULL, &SlideTask_attributes);
+
+  /* creation of LiftTask */
+  LiftTaskHandle = osThreadNew(StartLiftTask, NULL, &LiftTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -603,6 +615,25 @@ void StartSlideTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartSlideTask */
+}
+
+/* USER CODE BEGIN Header_StartLiftTask */
+/**
+* @brief Function implementing the LiftTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartLiftTask */
+void StartLiftTask(void *argument)
+{
+  /* USER CODE BEGIN StartLiftTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    Lift_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartLiftTask */
 }
 
 /* Private application code --------------------------------------------------*/

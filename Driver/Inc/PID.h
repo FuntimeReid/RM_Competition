@@ -20,9 +20,9 @@ extern pid_t chassis_pid_velocity;
 extern pid_t GM6020_pid_location;
 extern pid_t GM6020_pid_velocity;
 
-extern pid_t M2006_pid_location;
-extern pid_t M2006_pid_velocity;
-extern pid_t M2006_pid_torque;
+extern pid_t M2006_pid_location[2];
+extern pid_t M2006_pid_velocity[2];
+extern pid_t M2006_pid_torque[2];
 
 int64_t Limit(int64_t limit,int64_t target);
 

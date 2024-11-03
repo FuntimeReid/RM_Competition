@@ -9,6 +9,7 @@ typedef struct
 {
     bool if_fast;
     float chassis;
+    float lift;
 }shift_coefficient_t;
 
 extern uint16_t shift_tim;

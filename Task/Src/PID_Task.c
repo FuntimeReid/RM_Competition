@@ -13,9 +13,12 @@ void PID_Task_Init()
     PID_Ini(&GM6020_pid_location,0.4,0,0);
     PID_Ini(&GM6020_pid_velocity,8,0,0);
 
-    PID_Ini(&M2006_pid_location,0.25,0,0.4);
-    PID_Ini(&M2006_pid_velocity,8,0,0);
-    PID_Ini(&M2006_pid_torque,1.4,0.5,0);
+    PID_Ini(&M2006_pid_location[0],0.25,0,0.4);
+    PID_Ini(&M2006_pid_velocity[0],8,0,0);
+    PID_Ini(&M2006_pid_torque[0],1.4,0.5,0);
+    PID_Ini(&M2006_pid_location[1],0.25,0,0.4);
+    PID_Ini(&M2006_pid_velocity[1],8,0,0);
+    PID_Ini(&M2006_pid_torque[1],1.4,0.5,0);
 }
 
 void PID_Task()
@@ -26,7 +29,7 @@ void PID_Task()
     GM6020_state.target_velocity = PID_Calc(&GM6020_pid_location,0,GM6020_measure.ecd,GM6020_measure.last_ecd,50,160,true);
     GM6020_state.current = PID_Calc(&GM6020_pid_velocity,GM6020_state.target_velocity * 10,GM6020_measure.speed_rpm * 10,0,1500,30000,false);
 
-    M2006_state[0].target_speed = PID_Calc(&M2006_pid_location,0,M2006_measure[0].ecd,M2006_measure[0].last_ecd,500,13000,true);
-    M2006_state[0].target_torque = PID_Calc(&M2006_pid_velocity,M2006_state[0].target_speed,M2006_measure[0].speed_rpm,0,10000,10000,false);
-    M2006_state[0].current = PID_Calc(&M2006_pid_torque,M2006_state[0].target_torque,M2006_measure[0].torque,0,3000,10000,false);
+    M2006_state[0].target_speed = PID_Calc(&M2006_pid_location[0],0,M2006_measure[0].ecd,M2006_measure[0].last_ecd,500,13000,true);
+    M2006_state[0].target_torque = PID_Calc(&M2006_pid_velocity[0],M2006_state[0].target_speed,M2006_measure[0].speed_rpm,0,10000,10000,false);
+    M2006_state[0].current = PID_Calc(&M2006_pid_torque[0],M2006_state[0].target_torque,M2006_measure[0].torque,0,3000,10000,false);
 }
