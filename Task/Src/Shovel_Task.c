@@ -1,5 +1,7 @@
 
 #include "Shovel_Task.h"
+
+#include "Outage_Task.h"
 #include "tim.h"
 
 uint32_t shovel_tim;
@@ -19,24 +21,31 @@ void Shovel_Task_Init()
 
 void Shovel_Task()
 {
-    switch (RC_CtrlData.rc.s1)
+    if(outage_tim <= 100)
     {
-        case 1:
+        switch (RC_CtrlData.rc.s1)
         {
-            Shovel_Ctrl(400);
-            break;
+            case 1:
+            {
+                Shovel_Ctrl(400);
+                break;
+            }
+            case 2:
+            {
+                Shovel_Ctrl(200);
+                break;
+            }
+            case 3:
+            {
+                Shovel_Pulse_Setting(0);
+                shovel_tim = 0;
+                break;
+            }
         }
-        case 2:
-        {
-            Shovel_Ctrl(200);
-            break;
-        }
-        case 3:
-        {
-            Shovel_Pulse_Setting(0);
-            shovel_tim = 0;
-            break;
-        }
+    }
+    else
+    {
+        Shovel_Pulse_Setting(0);
     }
 }
 

@@ -14,7 +14,6 @@ void Shift_Task_Init()
     shift_coefficient.chassis = 10;
     shift_coefficient.lift = 1.5;
     last_s1 = 3;
-    LED_RED();
 }
 
 void Shift_Task()
@@ -42,14 +41,12 @@ void Shift_Task()
                 shift_coefficient.if_fast = false;
                 shift_coefficient.chassis = 0.5;
                 shift_coefficient.lift = 0.5;
-                LED_GREEN();
             }
             else
             {
                 shift_coefficient.if_fast = true;
                 shift_coefficient.chassis = 10;
                 shift_coefficient.lift = 1.5;
-                LED_RED();
             }
             s1_time = 0;
         }

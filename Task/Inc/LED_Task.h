@@ -6,4 +6,6 @@
 
 void LED_Task_Init();
 
+void LED_Task();
+
 #endif //LED_TASK_H

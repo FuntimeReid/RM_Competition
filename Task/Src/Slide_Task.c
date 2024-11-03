@@ -1,6 +1,8 @@
 
 #include "Slide_Task.h"
 
+#include "Outage_Task.h"
+
 void Slide_Task_Init()
 {
     Tim1_sConfigOC1.OCMode = TIM_OCMODE_PWM1;
@@ -16,15 +18,23 @@ void Slide_Task_Init()
 
 void Slide_Task()
 {
-    if(RC_CtrlData.rc.ch4 > 0)
+    if(outage_tim <= 100)
     {
-        Slide_OC1Pulse_Setting(RC_CtrlData.rc.ch4 * 2);
-        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_11, GPIO_PIN_RESET);
-    }
-    else if(RC_CtrlData.rc.ch4 < 0)
-    {
-        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_11, GPIO_PIN_SET);
-        Slide_OC1Pulse_Setting(0);
+        if(RC_CtrlData.rc.ch4 > 0)
+        {
+            Slide_OC1Pulse_Setting(RC_CtrlData.rc.ch4 * 2);
+            HAL_GPIO_WritePin(GPIOE, GPIO_PIN_11, GPIO_PIN_RESET);
+        }
+        else if(RC_CtrlData.rc.ch4 < 0)
+        {
+            HAL_GPIO_WritePin(GPIOE, GPIO_PIN_11, GPIO_PIN_SET);
+            Slide_OC1Pulse_Setting(0);
+        }
+        else
+        {
+            HAL_GPIO_WritePin(GPIOE, GPIO_PIN_11, GPIO_PIN_RESET);
+            Slide_OC1Pulse_Setting(0);
+        }
     }
     else
     {

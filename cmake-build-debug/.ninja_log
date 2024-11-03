@@ -719,3 +719,16 @@
 117	376	7523070232680593	RM_Competition.elf	ef5203415a5cba00
 17	131	7523072216019117	CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj	dce3af329f182ce7
 131	411	7523072217159769	RM_Competition.elf	ef5203415a5cba00
+24	139	7523097554840493	CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj	88234d8effe3ef09
+11	140	7523097554709442	CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj	5125ed8744b8e2f1
+31	140	7523097554903743	CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj	b8234229932f99b6
+39	141	7523097554987556	CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj	dce3af329f182ce7
+142	422	7523097556014058	RM_Competition.elf	ef5203415a5cba00
+10	112	7523098514888887	CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj	dce3af329f182ce7
+113	360	7523098515914833	RM_Competition.elf	ef5203415a5cba00
+28	145	7523099727088821	CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj	88234d8effe3ef09
+20	174	7523099727007683	CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj	3d4ee58dbc97ef1e
+174	450	7523099728553694	RM_Competition.elf	ef5203415a5cba00
+10	112	7523100783402588	CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj	847b8bf77d561cb5
+17	113	7523100783482855	CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj	2eb56784e1a12a91
+113	371	7523100784435163	RM_Competition.elf	ef5203415a5cba00

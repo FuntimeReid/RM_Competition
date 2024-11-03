@@ -551,6 +551,7 @@ void StartLEDTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    LED_Task();
     osDelay(1);
   }
   /* USER CODE END StartLEDTask */
