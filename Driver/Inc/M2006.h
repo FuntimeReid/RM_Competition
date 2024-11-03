@@ -15,15 +15,15 @@
 typedef struct
 {
     uint16_t last_ecd;
-    int32_t speed_rpm;
-    int32_t torque;
+    int16_t speed_rpm;
+    int16_t torque;
     uint16_t ecd;
 }M2006_measure_t;
 
 typedef struct
 {
-    int32_t target_torque;
-    int32_t target_speed;
+    int16_t target_torque;
+    int16_t target_speed;
     int32_t current;
 }M2006_state_t;
 

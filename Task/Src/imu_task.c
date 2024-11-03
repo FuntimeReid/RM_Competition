@@ -18,6 +18,7 @@ uint32_t INS_DWT_Count = 0;
 static float dt = 0, t = 0;
 uint8_t ins_debug_mode = 0;
 float RefTemp = 40;
+yaw_state_t yaw_state;
 
 static void IMU_Param_Correction(IMU_Param_t *param, float gyro[3], float accel[3]);
 
@@ -40,6 +41,9 @@ void IMU_Init(void)
     HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_1);
 
     INS.AccelLPF = 0.0085;
+
+    yaw_state.last_yaw = INS.Yaw;
+    yaw_state.yaw = INS.Yaw;
 }
 
 void IMU_Task()

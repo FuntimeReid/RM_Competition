@@ -65,6 +65,14 @@ void EularAngleToQuaternion(float Yaw, float Pitch, float Roll, float *q);
 void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q);
 void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
 
+typedef struct
+{
+    int32_t yaw;
+    int32_t last_yaw;
+}yaw_state_t;
+
+extern yaw_state_t yaw_state;
+
 #endif //IMU_TASK_H
 
 #include "stm32f4xx_hal.h"

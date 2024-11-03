@@ -13,6 +13,7 @@ void Shift_Task_Init()
     shift_coefficient.if_fast = true;
     shift_coefficient.chassis = 10;
     shift_coefficient.lift = 1.5;
+    shift_coefficient.gyro = 0.02;
     last_s1 = 3;
 }
 
@@ -41,12 +42,14 @@ void Shift_Task()
                 shift_coefficient.if_fast = false;
                 shift_coefficient.chassis = 0.5;
                 shift_coefficient.lift = 0.5;
+                shift_coefficient.gyro = 0.002;
             }
             else
             {
                 shift_coefficient.if_fast = true;
                 shift_coefficient.chassis = 10;
                 shift_coefficient.lift = 1.5;
+                shift_coefficient.gyro = 0.02;
             }
             s1_time = 0;
         }

@@ -7,15 +7,15 @@
 typedef struct
 {
     uint16_t ecd;
-    int32_t speed_rpm;
-    int32_t given_current;
+    int16_t speed_rpm;
+    int16_t given_current;
     uint16_t temperature;
     uint16_t last_ecd;
 }GM6020_measure_t;
 
 typedef struct
 {
-    int32_t target_velocity;
+    int16_t target_velocity;
     int32_t current;
 }GM6020_state_t;
 

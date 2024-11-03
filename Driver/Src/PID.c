@@ -3,6 +3,7 @@
 
 #include "Outage_Task.h"
 
+pid_t chassis_pid_gyroscope;
 pid_t chassis_pid_velocity;
 
 pid_t GM6020_pid_location;
@@ -32,7 +33,7 @@ void PID_Ini(pid_t *pid,float kp,float ki,float kd)
     pid->kd = kd;
 }
 
-int64_t PID_Calc(pid_t *pid,int16_t target,int16_t now,uint16_t last,int16_t limit_i,int64_t limit_result,bool if_zero_crossing)
+int64_t PID_Calc(pid_t *pid,int32_t target,int32_t now,int32_t last,int16_t limit_i,int64_t limit_result,bool if_zero_crossing,bool if_gyroscope)
 {
     int64_t result = 0;
     if(if_zero_crossing)
@@ -60,6 +61,31 @@ int64_t PID_Calc(pid_t *pid,int16_t target,int16_t now,uint16_t last,int16_t lim
             }
         }
     }//位置环过零点pid
+    else if(if_gyroscope)
+    {
+        if(now - last > 0)
+        {
+            if(now - last > 180)
+            {
+                pid->error_now += (360 - now + last);
+            }
+            else
+            {
+                pid->error_now -= (now - last);
+            }
+        }
+        else
+        {
+            if(now - last < -180)
+            {
+                pid->error_now += (360 - last + now);
+            }
+            else
+            {
+                pid->error_now -= (now - last);
+            }
+        }
+    }//陀螺仪位置环过零点pid
     else
     {
         pid->error_now =  target - now;
