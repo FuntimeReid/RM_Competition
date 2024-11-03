@@ -23,7 +23,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="直流电机驱动">
+    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="6020参">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/PID_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/PID_Task.c" afterDir="false" />
     </list>
@@ -206,7 +206,8 @@
       <workItem from="1730519121416" duration="5000" />
       <workItem from="1730519149038" duration="5000" />
       <workItem from="1730549439037" duration="1810000" />
-      <workItem from="1730552210849" duration="1907000" />
+      <workItem from="1730552210849" duration="1923000" />
+      <workItem from="1730598924359" duration="1434000" />
     </task>
     <task id="LOCAL-00001" summary="遥控器解算">
       <option name="closed" value="true" />
@@ -312,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730471470285</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="6020参">
+      <option name="closed" value="true" />
+      <created>1730554432628</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730554432628</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +356,7 @@
     <MESSAGE value="舵机正反转" />
     <MESSAGE value="陀螺仪" />
     <MESSAGE value="直流电机驱动" />
-    <option name="LAST_COMMIT_MESSAGE" value="直流电机驱动" />
+    <MESSAGE value="6020参" />
+    <option name="LAST_COMMIT_MESSAGE" value="6020参" />
   </component>
 </project>
