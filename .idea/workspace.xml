@@ -23,23 +23,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="利用陀螺仪的转向">
+    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="完善关控保护（第一次接收遥控信号之前都断电）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Inc/PID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Inc/PID.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Src/PID.c" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Src/PID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Inc/Outage_Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/Outage_Task.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/CAN_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/CAN_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Door_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Door_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/LED_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/LED_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Lift_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Lift_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Outage_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Outage_Task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Src/PID_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/PID_Task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/Pitch_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Pitch_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Shovel_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Shovel_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Slide_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Slide_Task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/GM6020Ctrl.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/GM6020Ctrl.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" afterDir="false" />
@@ -233,7 +227,7 @@
       <workItem from="1730608390671" duration="407000" />
       <workItem from="1730608850162" duration="3374000" />
       <workItem from="1730612467598" duration="1844000" />
-      <workItem from="1730701870863" duration="402000" />
+      <workItem from="1730701870863" duration="6657000" />
     </task>
     <task id="LOCAL-00001" summary="遥控器解算">
       <option name="closed" value="true" />
@@ -387,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730614322750</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="完善关控保护（第一次接收遥控信号之前都断电）">
+      <option name="closed" value="true" />
+      <created>1730702300808</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730702300808</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +429,7 @@
     <MESSAGE value="2006控制" />
     <MESSAGE value="关控保护完善" />
     <MESSAGE value="利用陀螺仪的转向" />
-    <option name="LAST_COMMIT_MESSAGE" value="利用陀螺仪的转向" />
+    <MESSAGE value="完善关控保护（第一次接收遥控信号之前都断电）" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善关控保护（第一次接收遥控信号之前都断电）" />
   </component>
 </project>

@@ -44,4 +44,8 @@ void PID_Task()
     M2006_state[0].target_speed = PID_Calc(&M2006_pid_location[0],0,M2006_measure[0].ecd,M2006_measure[0].last_ecd,500,13000,true,false);
     M2006_state[0].target_torque = PID_Calc(&M2006_pid_velocity[0],M2006_state[0].target_speed,M2006_measure[0].speed_rpm,0,10000,10000,false,false);
     M2006_state[0].current = PID_Calc(&M2006_pid_torque[0],M2006_state[0].target_torque,M2006_measure[0].torque,0,3000,10000,false,false);
+
+    M2006_state[1].target_speed = PID_Calc(&M2006_pid_location[1],0,M2006_measure[1].ecd,M2006_measure[1].last_ecd,500,13000,true,false);
+    M2006_state[1].target_torque = PID_Calc(&M2006_pid_velocity[1],M2006_state[1].target_speed,M2006_measure[1].speed_rpm,0,10000,10000,false,false);
+    M2006_state[1].current = PID_Calc(&M2006_pid_torque[1],M2006_state[1].target_torque,M2006_measure[1].torque,0,3000,10000,false,false);
 }

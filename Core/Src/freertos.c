@@ -379,6 +379,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
       Get_M2006_Measure(&M2006_measure[0],CAN_rx_data);
       break;
     }
+    case 0x202:
+    {
+      Get_M2006_Measure(&M2006_measure[1],CAN_rx_data);
+      break;
+    }
     case 0x203:
     {
       Get_Motor_Measure(&motor_chassis[0],CAN_rx_data);
