@@ -12,5 +12,8 @@ void Pitch_Task_Init()
 
 void Pitch_Task()
 {
-    GM6020_pid_location.error_now -= RC_CtrlData.rc.ch1 * 0.1;
+    if(RC_CtrlData.rc.ch1 > -900)
+    {
+        GM6020_pid_location.error_now -= RC_CtrlData.rc.ch1 * 0.1;
+    }
 }

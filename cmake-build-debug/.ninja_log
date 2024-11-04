@@ -839,3 +839,9 @@
 145	423	7523173769074381	RM_Competition.elf	ef5203415a5cba00
 9	128	7523175053505448	CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj	9418a008108910ea
 129	373	7523175054700941	RM_Competition.elf	ef5203415a5cba00
+134	1335	7524051722001571	CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj	5c77a7230f3f725a
+121	1336	7524051721867251	CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj	aa38a83d0f254656
+127	1336	7524051721931262	CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj	9418a008108910ea
+113	1336	7524051721790706	CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj	975d1e1e35b683fc
+49	1336	7524051721145718	CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj	f0df902b23d4f4bf
+1336	4138	7524051734026100	RM_Competition.elf	ef5203415a5cba00

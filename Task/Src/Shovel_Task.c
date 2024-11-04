@@ -21,7 +21,7 @@ void Shovel_Task_Init()
 
 void Shovel_Task()
 {
-    if(outage_tim <= 100)
+    if(if_work)
     {
         switch (RC_CtrlData.rc.s1)
         {

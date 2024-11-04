@@ -12,7 +12,7 @@ void LED_Task_Init(void)
 
 void LED_Task()
 {
-    if(outage_tim > 100)
+    if(!if_work)
     {
         LED_WHITE();
     }

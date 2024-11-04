@@ -3,6 +3,7 @@
 
 #include "DBUS_Task.h"
 #include "M2006.h"
+#include "Outage_Task.h"
 #include "PID.h"
 #include "Shift_Task.h"
 

@@ -18,7 +18,7 @@ void Slide_Task_Init()
 
 void Slide_Task()
 {
-    if(outage_tim <= 100)
+    if(if_work)
     {
         if(RC_CtrlData.rc.ch4 > 0)
         {

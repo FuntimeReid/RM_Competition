@@ -340,6 +340,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   RemoteDataProcess(sbus_rx_buffer);
   osSemaphoreRelease(DBUS_SemHandle);
+  if_start = true;
 }
 /* USER CODE END Header_StartDBUSTask */
 void StartDBUSTask(void *argument)

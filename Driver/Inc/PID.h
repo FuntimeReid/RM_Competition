@@ -25,10 +25,10 @@ extern pid_t M2006_pid_location[2];
 extern pid_t M2006_pid_velocity[2];
 extern pid_t M2006_pid_torque[2];
 
-int64_t Limit(int64_t limit,int64_t target);
+int32_t Limit(int32_t limit,int32_t target);
 
 void PID_Ini(pid_t *pid,float kp,float ki,float kd);
 
-int64_t PID_Calc(pid_t *pid,int32_t target,int32_t now,int32_t last,int16_t limit_i,int64_t limit_result,bool if_zero_crossing,bool if_gyroscope);
+int16_t PID_Calc(pid_t *pid,int32_t target,int32_t now,int32_t last,int16_t limit_i,int16_t limit_result,bool if_zero_crossing,bool if_gyroscope);
 
 #endif //PID_H
