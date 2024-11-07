@@ -4,7 +4,7 @@
 #include "Outage_Task.h"
 
 pid_t chassis_pid_gyroscope;
-pid_t chassis_pid_velocity;
+pid_t chassis_pid_velocity[2];
 
 pid_t GM6020_pid_location;
 pid_t GM6020_pid_velocity;
@@ -19,81 +19,31 @@ int32_t Limit(int32_t limit,int32_t target)
     {
         return limit;
     }
-    else if(-limit > target && target < 0)
+    if(-limit > target && target < 0)
     {
         return -limit;
     }
     return target;
 }
 
-void PID_Ini(pid_t *pid,float kp,float ki,float kd)
+void PID_Ini(pid_t *pid,float kp,float ki,float kd,int16_t limit_i,int16_t limit_result)
 {
     pid->kp = kp;
     pid->ki = ki;
     pid->kd = kd;
+    pid->limit_i = limit_i;
+    pid->limit_result = limit_result;
 }
 
-int16_t PID_Calc(pid_t *pid,int32_t target,int32_t now,int32_t last,int16_t limit_i,int16_t limit_result,bool if_zero_crossing,bool if_gyroscope)
+int16_t PID_Calc(pid_t *pid,int32_t target,int16_t now)
 {
-    int64_t result = 0;
-    if(if_zero_crossing)
-    {
-        if(now - last > 0)
-        {
-            if(now - last > 4200)
-            {
-                pid->error_now += (8191 - now + last);
-            }
-            else
-            {
-                pid->error_now -= (now - last);
-            }
-        }
-        else
-        {
-            if(now - last < -4200)
-            {
-                pid->error_now -= (last - 8191 + now);
-            }
-            else
-            {
-                pid->error_now += (last - now);
-            }
-        }
-    }//位置环过零点pid
-    else if(if_gyroscope)
-    {
-        if(now - last > 0)
-        {
-            if(now - last > 180)
-            {
-                pid->error_now += (360 - now + last);
-            }
-            else
-            {
-                pid->error_now -= (now - last);
-            }
-        }
-        else
-        {
-            if(now - last < -180)
-            {
-                pid->error_now += (360 - last + now);
-            }
-            else
-            {
-                pid->error_now -= (now - last);
-            }
-        }
-    }//陀螺仪位置环过零点pid
-    else
-    {
-        pid->error_now =  target - now;
-    }//速度环pid
+    int32_t result = 0;
+
+    pid->error_now =  target - now;
 
     if(pid->error_now < 500)
     {
-        if(outage_tim <= 100)
+        if(if_work)
         {
             pid->error_all += pid->error_now * 0.1;
         }
@@ -103,14 +53,46 @@ int16_t PID_Calc(pid_t *pid,int32_t target,int32_t now,int32_t last,int16_t limi
         }
     }//积分分离
 
-    pid->error_all = Limit(limit_i,pid->error_all);
+    pid->error_all = Limit(pid->limit_i,pid->error_all);
     if((target > 0 && pid->error_all < 0) || (target < 0 && pid->error_all > 0))
     {
         pid->error_all *= -0.8;
     }//减小正负交替的响应时间
 
-    result = pid->kp * pid->error_now + pid->ki * pid->error_all;
-    result = Limit(limit_result,result);
+    result = pid->kp * pid->error_now + pid->ki * pid->error_all + pid->kd * (pid->error_now - pid->error_last);
+    result = Limit(pid->limit_result,result);
     pid->error_last = pid->error_now;
     return result;
+}
+
+int32_t Loc_Error_Now_Calc(pid_t pid,int32_t now,int32_t last)
+{
+    int32_t temp = 0;
+
+    if(now - last > 0)
+    {
+        if(now - last > 4200)
+        {
+            temp = (8191 - now + last) + pid.error_now;
+            return temp;
+        }
+        else
+        {
+            temp = (last - now) + pid.error_now;
+            return temp;
+        }
+    }
+    else
+    {
+        if(now - last < -4200)
+        {
+            temp = -(last - 8191 + now) + pid.error_now;
+            return temp;
+        }
+        else
+        {
+            temp = (last - now) + pid.error_now;
+            return temp;
+        }
+    }
 }

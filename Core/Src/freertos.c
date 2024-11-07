@@ -88,7 +88,7 @@ const osThreadAttr_t CANTask_attributes = {
 osThreadId_t PIDTaskHandle;
 const osThreadAttr_t PIDTask_attributes = {
   .name = "PIDTask",
-  .stack_size = 128 * 4,
+  .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for DoorTask */
@@ -340,7 +340,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   RemoteDataProcess(sbus_rx_buffer);
   osSemaphoreRelease(DBUS_SemHandle);
-  if_start = true;
+  if_start = true;//遥控器第一次打开
 }
 /* USER CODE END Header_StartDBUSTask */
 void StartDBUSTask(void *argument)

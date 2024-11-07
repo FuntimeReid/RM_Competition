@@ -42,8 +42,8 @@ void IMU_Init(void)
 
     INS.AccelLPF = 0.0085;
 
-    yaw_state.last_yaw = INS.Yaw;
-    yaw_state.yaw = INS.Yaw;
+    yaw_state.target_yaw = INS.YawTotalAngle;
+    yaw_state.yaw = (int32_t)INS.YawTotalAngle;
 }
 
 void IMU_Task()
@@ -98,6 +98,8 @@ void IMU_Task()
             INS.Pitch = QEKF_INS.Pitch;
             INS.Roll = QEKF_INS.Roll;
             INS.YawTotalAngle = QEKF_INS.YawTotalAngle;
+
+            yaw_state.yaw = (int32_t)INS.YawTotalAngle;
         }
 
         // temperature control

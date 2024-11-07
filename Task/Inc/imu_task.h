@@ -68,7 +68,7 @@ void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
 typedef struct
 {
     int32_t yaw;
-    int32_t last_yaw;
+    double target_yaw;
 }yaw_state_t;
 
 extern yaw_state_t yaw_state;

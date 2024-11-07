@@ -9,6 +9,4 @@ void Slide_Task_Init();
 
 void Slide_Task();
 
-void Slide_OC1Pulse_Setting(int16_t pulse);
-
 #endif //SLIDE_TASK_H
