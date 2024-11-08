@@ -7837,7 +7837,7 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
                 0x08000000                g_pfnVectors
                 0x08000188                        . = ALIGN (0x4)
 
-.text           0x08000190     0xc994
+.text           0x08000190     0xca18
                 0x08000190                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000190      0x378 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
@@ -8911,318 +8911,317 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .text.Pitch_Task_Init
                 0x0800a968        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
                 0x0800a968                Pitch_Task_Init
- *fill*         0x0800a974        0x4 
  .text.Pitch_Task
-                0x0800a978       0xb4 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
-                0x0800a978                Pitch_Task
+                0x0800a974       0xb0 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
+                0x0800a974                Pitch_Task
  .text.Shift_Task_Init
-                0x0800aa2c       0x2c CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
-                0x0800aa2c                Shift_Task_Init
+                0x0800aa24       0x34 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+                0x0800aa24                Shift_Task_Init
  .text.Shift_Task
-                0x0800aa58       0x98 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+                0x0800aa58       0xa4 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
                 0x0800aa58                Shift_Task
  .text.Shovel_Task_Init
-                0x0800aaf0       0x30 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
-                0x0800aaf0                Shovel_Task_Init
+                0x0800aafc       0x30 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+                0x0800aafc                Shovel_Task_Init
  .text.Shovel_Pulse_Setting
-                0x0800ab20       0x18 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
-                0x0800ab20                Shovel_Pulse_Setting
+                0x0800ab2c       0x18 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+                0x0800ab2c                Shovel_Pulse_Setting
  .text.Shovel_Ctrl
-                0x0800ab38       0x20 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
-                0x0800ab38                Shovel_Ctrl
+                0x0800ab44       0x20 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+                0x0800ab44                Shovel_Ctrl
  .text.Shovel_Task
-                0x0800ab58       0x50 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
-                0x0800ab58                Shovel_Task
+                0x0800ab64       0x50 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+                0x0800ab64                Shovel_Task
  .text.Slide_Task_Init
-                0x0800aba8       0x24 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
-                0x0800aba8                Slide_Task_Init
+                0x0800abb4       0x3c CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+                0x0800abb4                Slide_Task_Init
  .text.Slide_Task
-                0x0800abcc       0x94 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
-                0x0800abcc                Slide_Task
+                0x0800abf0       0xf4 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+                0x0800abf0                Slide_Task
  .text.IMU_Param_Correction
-                0x0800ac60      0x2c8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800ace4      0x2c8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
  .text.IMU_Init
-                0x0800af28       0xe8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800af28                IMU_Init
+                0x0800afac       0xe8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800afac                IMU_Init
  .text.BodyFrameToEarthFrame
-                0x0800b010      0x126 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800b010                BodyFrameToEarthFrame
+                0x0800b094      0x126 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800b094                BodyFrameToEarthFrame
  .text.EarthFrameToBodyFrame
-                0x0800b136      0x126 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800b136                EarthFrameToBodyFrame
+                0x0800b1ba      0x126 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800b1ba                EarthFrameToBodyFrame
  .text.IMU_Temperature_Ctrl
-                0x0800b25c       0x60 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800b25c                IMU_Temperature_Ctrl
+                0x0800b2e0       0x60 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800b2e0                IMU_Temperature_Ctrl
  .text.IMU_Task
-                0x0800b2bc      0x1dc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800b2bc                IMU_Task
+                0x0800b340      0x1dc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800b340                IMU_Task
  .text.__udivmoddi4
-                0x0800b498      0x2bc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x0800b498                __udivmoddi4
- .text.malloc   0x0800b754       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
-                0x0800b754                malloc
+                0x0800b51c      0x2bc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800b51c                __udivmoddi4
+ .text.malloc   0x0800b7d8       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
+                0x0800b7d8                malloc
  .text._malloc_r
-                0x0800b764      0x564 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x0800b764                _malloc_r
+                0x0800b7e8      0x564 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+                0x0800b7e8                _malloc_r
  .text.__malloc_lock
-                0x0800bcc8        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
-                0x0800bcc8                __malloc_lock
+                0x0800bd4c        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+                0x0800bd4c                __malloc_lock
  .text.__malloc_unlock
-                0x0800bcd4        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
-                0x0800bcd4                __malloc_unlock
- .text.memset   0x0800bce0       0xa4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
-                0x0800bce0                memset
+                0x0800bd58        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+                0x0800bd58                __malloc_unlock
+ .text.memset   0x0800bd64       0xa4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x0800bd64                memset
  .text._reclaim_reent
-                0x0800bd84       0x6c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
-                0x0800bd84                _reclaim_reent
- .text._sbrk_r  0x0800bdf0       0x24 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
-                0x0800bdf0                _sbrk_r
- .text.__errno  0x0800be14        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
-                0x0800be14                __errno
+                0x0800be08       0x6c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
+                0x0800be08                _reclaim_reent
+ .text._sbrk_r  0x0800be74       0x24 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
+                0x0800be74                _sbrk_r
+ .text.__errno  0x0800be98        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+                0x0800be98                __errno
  .text.__libc_init_array
-                0x0800be20       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
-                0x0800be20                __libc_init_array
+                0x0800bea4       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x0800bea4                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x0800be70        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x0800be70                __retarget_lock_acquire_recursive
+                0x0800bef4        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x0800bef4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0800be74        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x0800be74                __retarget_lock_release_recursive
- .text.sysconf  0x0800be78       0x1c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
-                0x0800be78                sysconf
+                0x0800bef8        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x0800bef8                __retarget_lock_release_recursive
+ .text.sysconf  0x0800befc       0x1c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
+                0x0800befc                sysconf
  .text.startup.register_fini
-                0x0800be94       0x14 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x0800bea8        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
-                0x0800bea8                atexit
+                0x0800bf18       0x14 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x0800bf2c        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x0800bf2c                atexit
  .text._malloc_trim_r
-                0x0800beb4       0xb8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
-                0x0800beb4                _malloc_trim_r
- .text._free_r  0x0800bf6c      0x1f8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
-                0x0800bf6c                _free_r
+                0x0800bf38       0xb8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+                0x0800bf38                _malloc_trim_r
+ .text._free_r  0x0800bff0      0x1f8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+                0x0800bff0                _free_r
  .text.__libc_fini_array
-                0x0800c164       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
-                0x0800c164                __libc_fini_array
+                0x0800c1e8       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x0800c1e8                __libc_fini_array
  .text.__register_exitproc
-                0x0800c18c       0x80 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x0800c18c                __register_exitproc
- .text.acosf    0x0800c20c       0x58 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_acos.o)
-                0x0800c20c                acosf
- .text.asinf    0x0800c264       0x58 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
-                0x0800c264                asinf
- .text.atan2f   0x0800c2bc        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
-                0x0800c2bc                atan2f
- .text.sqrtf    0x0800c2c0       0x44 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
-                0x0800c2c0                sqrtf
- .text.fabsf    0x0800c304       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
-                0x0800c304                fabsf
- .text.fmin     0x0800c314       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fmin.o)
-                0x0800c314                fmin
+                0x0800c210       0x80 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x0800c210                __register_exitproc
+ .text.acosf    0x0800c290       0x58 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_acos.o)
+                0x0800c290                acosf
+ .text.asinf    0x0800c2e8       0x58 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
+                0x0800c2e8                asinf
+ .text.atan2f   0x0800c340        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
+                0x0800c340                atan2f
+ .text.sqrtf    0x0800c344       0x44 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
+                0x0800c344                sqrtf
+ .text.fabsf    0x0800c388       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                0x0800c388                fabsf
+ .text.fmin     0x0800c398       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fmin.o)
+                0x0800c398                fmin
  .text.__fpclassifyd
-                0x0800c364       0x5c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fpclassify.o)
-                0x0800c364                __fpclassifyd
- .text.nanf     0x0800c3c0        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
-                0x0800c3c0                nanf
+                0x0800c3e8       0x5c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fpclassify.o)
+                0x0800c3e8                __fpclassifyd
+ .text.nanf     0x0800c444        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
+                0x0800c444                nanf
  .text.__ieee754_sqrtf
-                0x0800c3cc        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
-                0x0800c3cc                __ieee754_sqrtf
+                0x0800c450        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
+                0x0800c450                __ieee754_sqrtf
  .text.__ieee754_acosf
-                0x0800c3d4      0x244 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_acos.o)
-                0x0800c3d4                __ieee754_acosf
+                0x0800c458      0x244 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_acos.o)
+                0x0800c458                __ieee754_acosf
  .text.__ieee754_asinf
-                0x0800c618      0x1f8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
-                0x0800c618                __ieee754_asinf
+                0x0800c69c      0x1f8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
+                0x0800c69c                __ieee754_asinf
  .text.__ieee754_atan2f
-                0x0800c810      0x150 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
-                0x0800c810                __ieee754_atan2f
- .text.atanf    0x0800c960      0x1ac E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
-                0x0800c960                atanf
+                0x0800c894      0x150 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800c894                __ieee754_atan2f
+ .text.atanf    0x0800c9e4      0x1ac E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x0800c9e4                atanf
  *(.glue_7)
- .glue_7        0x0800cb0c        0x0 linker stubs
+ .glue_7        0x0800cb90        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800cb0c        0x0 linker stubs
+ .glue_7t       0x0800cb90        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0800cb0c        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0800cb90        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0800cb0c        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800cb0c                _init
- .init          0x0800cb10        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0800cb90        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800cb90                _init
+ .init          0x0800cb94        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800cb18        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800cb18                _fini
- .fini          0x0800cb1c        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800cb24                        . = ALIGN (0x4)
-                0x0800cb24                        _etext = .
+ .fini          0x0800cb9c        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800cb9c                _fini
+ .fini          0x0800cba0        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0800cba8                        . = ALIGN (0x4)
+                0x0800cba8                        _etext = .
 
-.vfp11_veneer   0x0800cb24        0x0
- .vfp11_veneer  0x0800cb24        0x0 linker stubs
+.vfp11_veneer   0x0800cba8        0x0
+ .vfp11_veneer  0x0800cba8        0x0 linker stubs
 
-.v4_bx          0x0800cb24        0x0
- .v4_bx         0x0800cb24        0x0 linker stubs
+.v4_bx          0x0800cba8        0x0
+ .v4_bx         0x0800cba8        0x0 linker stubs
 
-.iplt           0x0800cb24        0x0
- .iplt          0x0800cb24        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0800cba8        0x0
+ .iplt          0x0800cba8        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0800cb24      0xc84
-                0x0800cb24                        . = ALIGN (0x4)
+.rodata         0x0800cba8      0xc84
+                0x0800cba8                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.4
-                0x0800cb24       0xf4 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cba8       0xf4 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
                                  0xdc (size before relaxing)
  .rodata.Pitch_Sem_attributes
-                0x0800cc18       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc18                Pitch_Sem_attributes
+                0x0800cc9c       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cc9c                Pitch_Sem_attributes
  .rodata.Chassis_Sem_attributes
-                0x0800cc28       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc28                Chassis_Sem_attributes
+                0x0800ccac       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ccac                Chassis_Sem_attributes
  .rodata.Outage_Sem_attributes
-                0x0800cc38       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc38                Outage_Sem_attributes
+                0x0800ccbc       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ccbc                Outage_Sem_attributes
  .rodata.Shift_Sem_attributes
-                0x0800cc48       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc48                Shift_Sem_attributes
+                0x0800cccc       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cccc                Shift_Sem_attributes
  .rodata.CAN_Sem_attributes
-                0x0800cc58       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc58                CAN_Sem_attributes
+                0x0800ccdc       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ccdc                CAN_Sem_attributes
  .rodata.DBUS_Sem_attributes
-                0x0800cc68       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc68                DBUS_Sem_attributes
+                0x0800ccec       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ccec                DBUS_Sem_attributes
  .rodata.LiftTask_attributes
-                0x0800cc78       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc78                LiftTask_attributes
+                0x0800ccfc       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ccfc                LiftTask_attributes
  .rodata.SlideTask_attributes
-                0x0800cc9c       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cc9c                SlideTask_attributes
+                0x0800cd20       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cd20                SlideTask_attributes
  .rodata.IMUTask_attributes
-                0x0800ccc0       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800ccc0                IMUTask_attributes
+                0x0800cd44       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cd44                IMUTask_attributes
  .rodata.ShovelTask_attributes
-                0x0800cce4       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cce4                ShovelTask_attributes
+                0x0800cd68       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cd68                ShovelTask_attributes
  .rodata.LEDTask_attributes
-                0x0800cd08       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cd08                LEDTask_attributes
+                0x0800cd8c       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cd8c                LEDTask_attributes
  .rodata.OutageTask_attributes
-                0x0800cd2c       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cd2c                OutageTask_attributes
+                0x0800cdb0       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cdb0                OutageTask_attributes
  .rodata.PitchTask_attributes
-                0x0800cd50       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cd50                PitchTask_attributes
+                0x0800cdd4       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cdd4                PitchTask_attributes
  .rodata.ChassisTask_attributes
-                0x0800cd74       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cd74                ChassisTask_attributes
+                0x0800cdf8       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800cdf8                ChassisTask_attributes
  .rodata.ShiftTask_attributes
-                0x0800cd98       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cd98                ShiftTask_attributes
+                0x0800ce1c       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ce1c                ShiftTask_attributes
  .rodata.DoorTask_attributes
-                0x0800cdbc       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cdbc                DoorTask_attributes
+                0x0800ce40       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ce40                DoorTask_attributes
  .rodata.PIDTask_attributes
-                0x0800cde0       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800cde0                PIDTask_attributes
+                0x0800ce64       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ce64                PIDTask_attributes
  .rodata.CANTask_attributes
-                0x0800ce04       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800ce04                CANTask_attributes
+                0x0800ce88       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ce88                CANTask_attributes
  .rodata.DBUSTasK_attributes
-                0x0800ce28       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800ce28                DBUSTasK_attributes
+                0x0800ceac       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ceac                DBUSTasK_attributes
  .rodata.defaultTask_attributes
-                0x0800ce4c       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
-                0x0800ce4c                defaultTask_attributes
+                0x0800ced0       0x24 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+                0x0800ced0                defaultTask_attributes
  .rodata.APBPrescTable
-                0x0800ce70        0x8 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x0800ce70                APBPrescTable
+                0x0800cef4        0x8 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0800cef4                APBPrescTable
  .rodata.AHBPrescTable
-                0x0800ce78       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x0800ce78                AHBPrescTable
+                0x0800cefc       0x10 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0800cefc                AHBPrescTable
  .rodata.write_BMI088_gyro_reg_data_error
-                0x0800ce88       0x12 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
- *fill*         0x0800ce9a        0x2 
+                0x0800cf0c       0x12 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
+ *fill*         0x0800cf1e        0x2 
  .rodata.write_BMI088_accel_reg_data_error
-                0x0800ce9c       0x12 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
- *fill*         0x0800ceae        0x2 
+                0x0800cf20       0x12 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
+ *fill*         0x0800cf32        0x2 
  .rodata.IMU_QuaternionEKF_F
-                0x0800ceb0       0x90 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/QuaternionEKF.c.obj
-                0x0800ceb0                IMU_QuaternionEKF_F
+                0x0800cf34       0x90 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/QuaternionEKF.c.obj
+                0x0800cf34                IMU_QuaternionEKF_F
  .rodata.sinTable_f32
-                0x0800cf40      0x804 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c.obj
-                0x0800cf40                sinTable_f32
+                0x0800cfc4      0x804 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c.obj
+                0x0800cfc4                sinTable_f32
  .rodata.flagBitshiftOffset.0
-                0x0800d744        0x8 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x0800d7c8        0x8 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .rodata.vTaskStartScheduler.str1.4
-                0x0800d74c        0x5 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800d7d0        0x5 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x0800d74c        0x5 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x0800d7d0        0x5 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .rodata.xTimerCreateTimerTask.str1.4
-                0x0800d74c        0x8 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .rodata.zb     0x0800d74c        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800d74c                zb
- .rodata.yb     0x0800d758        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800d758                yb
- .rodata.xb     0x0800d764        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x0800d764                xb
+                0x0800d7d0        0x8 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .rodata.zb     0x0800d7d0        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800d7d0                zb
+ .rodata.yb     0x0800d7dc        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800d7dc                yb
+ .rodata.xb     0x0800d7e8        0xc CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x0800d7e8                xb
  .rodata.acosf.str1.4
-                0x0800d770        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_acos.o)
+                0x0800d7f4        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_acos.o)
  .rodata.asinf.str1.4
-                0x0800d770        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
+                0x0800d7f4        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
  .rodata.CSWTCH.9
-                0x0800d770        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800d7f4        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.CSWTCH.8
-                0x0800d77c        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800d800        0xc E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.atanlo
-                0x0800d788       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x0800d80c       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
  .rodata.atanhi
-                0x0800d798       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
-                0x0800d7a8                        . = ALIGN (0x4)
+                0x0800d81c       0x10 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x0800d82c                        . = ALIGN (0x4)
 
-.ARM.extab      0x0800d7a8        0x0
-                0x0800d7a8                        . = ALIGN (0x4)
+.ARM.extab      0x0800d82c        0x0
+                0x0800d82c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800d7a8                        . = ALIGN (0x4)
+                0x0800d82c                        . = ALIGN (0x4)
 
-.ARM            0x0800d7a8        0x8
-                0x0800d7a8                        . = ALIGN (0x4)
-                0x0800d7a8                        __exidx_start = .
+.ARM            0x0800d82c        0x8
+                0x0800d82c                        . = ALIGN (0x4)
+                0x0800d82c                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800d7a8        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+ .ARM.exidx     0x0800d82c        0x8 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
  .ARM.exidx.text.__udivmoddi4
-                0x0800d7b0        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800d834        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0800d7b0                        __exidx_end = .
-                0x0800d7b0                        . = ALIGN (0x4)
+                0x0800d834                        __exidx_end = .
+                0x0800d834                        . = ALIGN (0x4)
 
-.rel.dyn        0x0800d7b0        0x0
- .rel.iplt      0x0800d7b0        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0800d834        0x0
+ .rel.iplt      0x0800d834        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x0800d7b0        0x0
-                0x0800d7b0                        . = ALIGN (0x4)
-                0x0800d7b0                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800d834        0x0
+                0x0800d834                        . = ALIGN (0x4)
+                0x0800d834                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0800d7b0                        PROVIDE (__preinit_array_end = .)
-                0x0800d7b0                        . = ALIGN (0x4)
+                0x0800d834                        PROVIDE (__preinit_array_end = .)
+                0x0800d834                        . = ALIGN (0x4)
 
-.init_array     0x0800d7b0        0x8
-                0x0800d7b0                        . = ALIGN (0x4)
-                0x0800d7b0                        PROVIDE (__init_array_start = .)
+.init_array     0x0800d834        0x8
+                0x0800d834                        . = ALIGN (0x4)
+                0x0800d834                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0800d7b0        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x0800d834        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0800d7b4        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800d7b8                        PROVIDE (__init_array_end = .)
-                0x0800d7b8                        . = ALIGN (0x4)
+ .init_array    0x0800d838        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0800d83c                        PROVIDE (__init_array_end = .)
+                0x0800d83c                        . = ALIGN (0x4)
 
-.fini_array     0x0800d7b8        0x4
-                0x0800d7b8                        . = ALIGN (0x4)
-                0x0800d7b8                        PROVIDE (__fini_array_start = .)
+.fini_array     0x0800d83c        0x4
+                0x0800d83c                        . = ALIGN (0x4)
+                0x0800d83c                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800d7b8        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800d7bc                        PROVIDE (__fini_array_end = .)
-                0x0800d7bc                        . = ALIGN (0x4)
-                0x0800d7bc                        _sidata = LOADADDR (.data)
+ .fini_array    0x0800d83c        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0800d840                        PROVIDE (__fini_array_end = .)
+                0x0800d840                        . = ALIGN (0x4)
+                0x0800d840                        _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x60c load address 0x0800d7bc
+.data           0x20000000      0x60c load address 0x0800d840
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -9277,19 +9276,19 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  *(.RamFunc*)
                 0x2000060c                        . = ALIGN (0x4)
                 0x2000060c                        _edata = .
-                0x0800ddc8                        _siccmram = LOADADDR (.ccmram)
+                0x0800de4c                        _siccmram = LOADADDR (.ccmram)
 
 .tm_clone_table
-                0x2000060c        0x0 load address 0x0800ddc8
+                0x2000060c        0x0 load address 0x0800de4c
  .tm_clone_table
                 0x2000060c        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x2000060c        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x2000060c        0x0 load address 0x0800ddc8
+.igot.plt       0x2000060c        0x0 load address 0x0800de4c
  .igot.plt      0x2000060c        0x0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x0800ddc8
+.ccmram         0x10000000        0x0 load address 0x0800de4c
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
@@ -9298,7 +9297,7 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
                 0x10000000                        _eccmram = .
                 0x10000000                        . = ALIGN (0x4)
 
-.bss            0x20000610    0x18888
+.bss            0x20000610    0x18890
                 0x20000610                        _sbss = .
                 0x20000610                        __bss_start__ = _sbss
  *(.bss)
@@ -9687,87 +9686,88 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
                 0x200189ce        0x2 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
                 0x200189ce                shift_tim
  .bss.shift_coefficient
-                0x200189d0       0x10 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+                0x200189d0       0x14 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
                 0x200189d0                shift_coefficient
  .bss.shovel_tim
-                0x200189e0        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
-                0x200189e0                shovel_tim
- .bss.c_33.0    0x200189e4        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_32.1    0x200189e8        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_31.2    0x200189ec        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_23.3    0x200189f0        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_22.4    0x200189f4        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_21.5    0x200189f8        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_13.6    0x200189fc        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_12.7    0x20018a00        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.c_11.8    0x20018a04        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x200189e4        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+                0x200189e4                shovel_tim
+ .bss.c_33.0    0x200189e8        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_32.1    0x200189ec        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_31.2    0x200189f0        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_23.3    0x200189f4        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_22.4    0x200189f8        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_21.5    0x200189fc        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_13.6    0x20018a00        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_12.7    0x20018a04        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.c_11.8    0x20018a08        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
  .bss.lastRollOffset.9
-                0x20018a08        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.lastPitchOffset.10
                 0x20018a0c        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.lastYawOffset.11
+ .bss.lastPitchOffset.10
                 0x20018a10        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.count.12  0x20018a14        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.lastYawOffset.11
+                0x20018a14        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.count.12  0x20018a18        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ *fill*         0x20018a1c        0x4 
  .bss.yaw_state
-                0x20018a18       0x10 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x20018a18                yaw_state
- .bss.t         0x20018a28        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .bss.dt        0x20018a2c        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018a20       0x10 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018a20                yaw_state
+ .bss.t         0x20018a30        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .bss.dt        0x20018a34        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
  .bss.INS_DWT_Count
-                0x20018a30        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x20018a30                INS_DWT_Count
- *fill*         0x20018a34        0x4 
- .bss.TempCtrl  0x20018a38       0xb8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x20018a38                TempCtrl
+                0x20018a38        0x4 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018a38                INS_DWT_Count
+ *fill*         0x20018a3c        0x4 
+ .bss.TempCtrl  0x20018a40       0xb8 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018a40                TempCtrl
  .bss.IMU_Param
-                0x20018af0       0x1c CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x20018af0                IMU_Param
- .bss.INS       0x20018b0c       0x80 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
-                0x20018b0c                INS
+                0x20018af8       0x1c CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018af8                IMU_Param
+ .bss.INS       0x20018b14       0x80 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+                0x20018b14                INS
  .bss.__malloc_current_mallinfo
-                0x20018b8c       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x20018b8c                __malloc_current_mallinfo
+                0x20018b94       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+                0x20018b94                __malloc_current_mallinfo
  .bss.__malloc_max_total_mem
-                0x20018bb4        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x20018bb4                __malloc_max_total_mem
- .bss.__malloc_max_sbrked_mem
-                0x20018bb8        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x20018bb8                __malloc_max_sbrked_mem
- .bss.__malloc_top_pad
                 0x20018bbc        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x20018bbc                __malloc_top_pad
- .bss.__sf      0x20018bc0      0x138 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
-                0x20018bc0                __sf
- .bss.errno     0x20018cf8        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
-                0x20018cf8                errno
+                0x20018bbc                __malloc_max_total_mem
+ .bss.__malloc_max_sbrked_mem
+                0x20018bc0        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+                0x20018bc0                __malloc_max_sbrked_mem
+ .bss.__malloc_top_pad
+                0x20018bc4        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+                0x20018bc4                __malloc_top_pad
+ .bss.__sf      0x20018bc8      0x138 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x20018bc8                __sf
+ .bss.errno     0x20018d00        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
+                0x20018d00                errno
  .bss.__lock___malloc_recursive_mutex
-                0x20018cfc        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x20018cfc                __lock___malloc_recursive_mutex
- *fill*         0x20018cfd        0x3 
+                0x20018d04        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x20018d04                __lock___malloc_recursive_mutex
+ *fill*         0x20018d05        0x3 
  .bss.__lock___atexit_recursive_mutex
-                0x20018d00        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x20018d00                __lock___atexit_recursive_mutex
- *fill*         0x20018d01        0x3 
- .bss.__atexit  0x20018d04        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
-                0x20018d04                __atexit
+                0x20018d08        0x1 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x20018d08                __lock___atexit_recursive_mutex
+ *fill*         0x20018d09        0x3 
+ .bss.__atexit  0x20018d0c        0x4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x20018d0c                __atexit
  .bss.__atexit0
-                0x20018d08      0x190 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x20018d08                __atexit0
+                0x20018d10      0x190 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x20018d10                __atexit0
  *(COMMON)
-                0x20018e98                        . = ALIGN (0x4)
-                0x20018e98                        _ebss = .
-                0x20018e98                        __bss_end__ = _ebss
+                0x20018ea0                        . = ALIGN (0x4)
+                0x20018ea0                        _ebss = .
+                0x20018ea0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20018e98      0x600
-                0x20018e98                        . = ALIGN (0x8)
+                0x20018ea0      0x600
+                0x20018ea0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x20018e98                        PROVIDE (_end = .)
-                0x20019098                        . = (. + _Min_Heap_Size)
- *fill*         0x20018e98      0x200 
-                0x20019498                        . = (. + _Min_Stack_Size)
- *fill*         0x20019098      0x400 
-                0x20019498                        . = ALIGN (0x8)
+                0x20018ea0                        PROVIDE (_end = .)
+                0x200190a0                        . = (. + _Min_Heap_Size)
+ *fill*         0x20018ea0      0x200 
+                0x200194a0                        . = (. + _Min_Stack_Size)
+ *fill*         0x200190a0      0x400 
+                0x200194a0                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -9973,7 +9973,7 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
 LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libm.a
 LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x36393
+.debug_info     0x00000000    0x3652a
  .debug_info    0x00000000      0x3be CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
  .debug_info    0x000003be      0x68f CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_PWM.c.obj
  .debug_info    0x00000a4d      0x5a1 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_dwt.c.obj
@@ -10028,18 +10028,18 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .debug_info    0x0002aadf     0x37d5 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .debug_info    0x0002e2b4     0x2215 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .debug_info    0x000304c9      0x8a9 CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj
- .debug_info    0x00030d72      0x31b CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj
- .debug_info    0x0003108d      0x79b CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj
- .debug_info    0x00031828      0x981 CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj
- .debug_info    0x000321a9      0x147 CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj
- .debug_info    0x000322f0      0x2f3 CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
- .debug_info    0x000325e3       0xfb CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
- .debug_info    0x000326de      0x86a CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
- .debug_info    0x00032f48      0x3b9 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
- .debug_info    0x00033301      0x29d CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
- .debug_info    0x0003359e      0x973 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
- .debug_info    0x00033f11      0x42d CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
- .debug_info    0x0003433e     0x2055 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .debug_info    0x00030d72      0x328 CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj
+ .debug_info    0x0003109a      0x79b CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj
+ .debug_info    0x00031835      0x981 CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj
+ .debug_info    0x000321b6      0x153 CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj
+ .debug_info    0x00032309      0x300 CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
+ .debug_info    0x00032609       0xfb CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
+ .debug_info    0x00032704      0x86a CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
+ .debug_info    0x00032f6e      0x3dd CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
+ .debug_info    0x0003334b      0x2aa CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+ .debug_info    0x000335f5      0x973 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+ .debug_info    0x00033f68      0x56d CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+ .debug_info    0x000344d5     0x2055 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
 
 .debug_abbrev   0x00000000     0x7c72
  .debug_abbrev  0x00000000      0x12a CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
@@ -10370,7 +10370,7 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .debug_rnglists
                 0x000018f0       0x77 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
 
-.debug_line     0x00000000    0x25200
+.debug_line     0x00000000    0x2523e
  .debug_line    0x00000000      0x215 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
  .debug_line    0x00000215      0x21b CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_PWM.c.obj
  .debug_line    0x00000430      0x3cf CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_dwt.c.obj
@@ -10432,80 +10432,80 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .debug_line    0x000236c7      0x199 CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
  .debug_line    0x00023860      0x183 CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
  .debug_line    0x000239e3      0x2c3 CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
- .debug_line    0x00023ca6      0x22c CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
- .debug_line    0x00023ed2      0x22f CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
- .debug_line    0x00024101      0x324 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
- .debug_line    0x00024425      0x23a CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
- .debug_line    0x0002465f      0xba1 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .debug_line    0x00023ca6      0x246 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
+ .debug_line    0x00023eec      0x247 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+ .debug_line    0x00024133      0x324 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+ .debug_line    0x00024457      0x246 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+ .debug_line    0x0002469d      0xba1 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
 
-.debug_str      0x00000000     0xb505
- .debug_str     0x00000000     0xb505 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
+.debug_str      0x00000000     0xb50b
+ .debug_str     0x00000000     0xb50b CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
                                 0x27b (size before relaxing)
- .debug_str     0x0000b505      0x737 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_PWM.c.obj
- .debug_str     0x0000b505      0x45c CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_dwt.c.obj
- .debug_str     0x0000b505      0xc86 CMakeFiles/RM_Competition.elf.dir/Core/Src/can.c.obj
- .debug_str     0x0000b505      0x7fc CMakeFiles/RM_Competition.elf.dir/Core/Src/dma.c.obj
- .debug_str     0x0000b505     0x14d2 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
- .debug_str     0x0000b505      0x3a9 CMakeFiles/RM_Competition.elf.dir/Core/Src/gpio.c.obj
- .debug_str     0x0000b505      0xb49 CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj
- .debug_str     0x0000b505      0xda0 CMakeFiles/RM_Competition.elf.dir/Core/Src/spi.c.obj
- .debug_str     0x0000b505      0x7f7 CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x0000b505      0xe9b CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_str     0x0000b505      0xfc7 CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x0000b505      0x254 CMakeFiles/RM_Competition.elf.dir/Core/Src/sysmem.c.obj
- .debug_str     0x0000b505      0x3a4 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_str     0x0000b505      0xbd2 CMakeFiles/RM_Competition.elf.dir/Core/Src/tim.c.obj
- .debug_str     0x0000b505      0xe6f CMakeFiles/RM_Competition.elf.dir/Core/Src/usart.c.obj
- .debug_str     0x0000b505       0x8b CMakeFiles/RM_Competition.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
- .debug_str     0x0000b505      0x766 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088Middleware.c.obj
- .debug_str     0x0000b505      0xaa7 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
- .debug_str     0x0000b505      0x8fa CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/QuaternionEKF.c.obj
- .debug_str     0x0000b505      0x982 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/controller.c.obj
- .debug_str     0x0000b505      0x6ce CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/kalman_filter.c.obj
- .debug_str     0x0000b505      0x423 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/user_lib.c.obj
- .debug_str     0x0000b505      0x288 CMakeFiles/RM_Competition.elf.dir/Driver/Src/ChassisCtrl.c.obj
- .debug_str     0x0000b505      0x27b CMakeFiles/RM_Competition.elf.dir/Driver/Src/GM6020Ctrl.c.obj
- .debug_str     0x0000b505      0x26a CMakeFiles/RM_Competition.elf.dir/Driver/Src/M2006.c.obj
- .debug_str     0x0000b505      0x332 CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj
- .debug_str     0x0000b505      0x71a CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c.obj
- .debug_str     0x0000b505      0x258 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c.obj
- .debug_str     0x0000b505      0x258 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_sin_f32.c.obj
- .debug_str     0x0000b505      0x339 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_add_f32.c.obj
- .debug_str     0x0000b505      0x264 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_init_f32.c.obj
- .debug_str     0x0000b505      0x37c CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_inverse_f32.c.obj
- .debug_str     0x0000b505      0x341 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_mult_f32.c.obj
- .debug_str     0x0000b505      0x339 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_sub_f32.c.obj
- .debug_str     0x0000b505      0x315 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_trans_f32.c.obj
- .debug_str     0x0000b505      0xb93 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x0000b505      0xa64 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
- .debug_str     0x0000b505      0xca4 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x0000b505      0x7a5 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_str     0x0000b505      0x50f CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x0000b505      0x735 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x0000b505      0xc23 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_str     0x0000b505     0x172e CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_str     0x0000b505      0xf3a CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_str     0x0000b505      0xdca CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_str     0x0000b505     0x2516 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_str     0x0000b505      0x331 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_str     0x0000b505      0x4b1 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_str     0x0000b505      0x54a CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_str     0x0000b505      0xd47 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_str     0x0000b505     0x1679 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_str     0x0000b505      0xf9b CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .debug_str     0x0000b505      0x667 CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj
- .debug_str     0x0000b505      0x31f CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj
- .debug_str     0x0000b505      0x724 CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj
- .debug_str     0x0000b505      0x889 CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj
- .debug_str     0x0000b505      0x24a CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj
- .debug_str     0x0000b505      0x2dc CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
- .debug_str     0x0000b505      0x214 CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
- .debug_str     0x0000b505      0x480 CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
- .debug_str     0x0000b505      0x340 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
- .debug_str     0x0000b505      0x2a9 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
- .debug_str     0x0000b505      0x890 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
- .debug_str     0x0000b505      0x2d3 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
- .debug_str     0x0000b505     0x1445 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .debug_str     0x0000b50b      0x737 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_PWM.c.obj
+ .debug_str     0x0000b50b      0x45c CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_dwt.c.obj
+ .debug_str     0x0000b50b      0xc86 CMakeFiles/RM_Competition.elf.dir/Core/Src/can.c.obj
+ .debug_str     0x0000b50b      0x7fc CMakeFiles/RM_Competition.elf.dir/Core/Src/dma.c.obj
+ .debug_str     0x0000b50b     0x14d2 CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj
+ .debug_str     0x0000b50b      0x3a9 CMakeFiles/RM_Competition.elf.dir/Core/Src/gpio.c.obj
+ .debug_str     0x0000b50b      0xb49 CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj
+ .debug_str     0x0000b50b      0xda0 CMakeFiles/RM_Competition.elf.dir/Core/Src/spi.c.obj
+ .debug_str     0x0000b50b      0x7f7 CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x0000b50b      0xe9b CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_str     0x0000b50b      0xfc7 CMakeFiles/RM_Competition.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x0000b50b      0x254 CMakeFiles/RM_Competition.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x0000b50b      0x3a4 CMakeFiles/RM_Competition.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_str     0x0000b50b      0xbd2 CMakeFiles/RM_Competition.elf.dir/Core/Src/tim.c.obj
+ .debug_str     0x0000b50b      0xe6f CMakeFiles/RM_Competition.elf.dir/Core/Src/usart.c.obj
+ .debug_str     0x0000b50b       0x8b CMakeFiles/RM_Competition.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
+ .debug_str     0x0000b50b      0x766 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088Middleware.c.obj
+ .debug_str     0x0000b50b      0xaa7 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/BMI088driver.c.obj
+ .debug_str     0x0000b50b      0x8fa CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/QuaternionEKF.c.obj
+ .debug_str     0x0000b50b      0x982 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/controller.c.obj
+ .debug_str     0x0000b50b      0x6ce CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/kalman_filter.c.obj
+ .debug_str     0x0000b50b      0x423 CMakeFiles/RM_Competition.elf.dir/Driver/BMI088/Src/user_lib.c.obj
+ .debug_str     0x0000b50b      0x288 CMakeFiles/RM_Competition.elf.dir/Driver/Src/ChassisCtrl.c.obj
+ .debug_str     0x0000b50b      0x27b CMakeFiles/RM_Competition.elf.dir/Driver/Src/GM6020Ctrl.c.obj
+ .debug_str     0x0000b50b      0x26a CMakeFiles/RM_Competition.elf.dir/Driver/Src/M2006.c.obj
+ .debug_str     0x0000b50b      0x332 CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj
+ .debug_str     0x0000b50b      0x71a CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c.obj
+ .debug_str     0x0000b50b      0x258 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c.obj
+ .debug_str     0x0000b50b      0x258 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_sin_f32.c.obj
+ .debug_str     0x0000b50b      0x339 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_add_f32.c.obj
+ .debug_str     0x0000b50b      0x264 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_init_f32.c.obj
+ .debug_str     0x0000b50b      0x37c CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_inverse_f32.c.obj
+ .debug_str     0x0000b50b      0x341 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_mult_f32.c.obj
+ .debug_str     0x0000b50b      0x339 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_sub_f32.c.obj
+ .debug_str     0x0000b50b      0x315 CMakeFiles/RM_Competition.elf.dir/Drivers/CMSIS/DSP/Source/MatrixFunctions/arm_mat_trans_f32.c.obj
+ .debug_str     0x0000b50b      0xb93 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x0000b50b      0xa64 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+ .debug_str     0x0000b50b      0xca4 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x0000b50b      0x7a5 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x0000b50b      0x50f CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x0000b50b      0x735 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x0000b50b      0xc23 CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_str     0x0000b50b     0x172e CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x0000b50b      0xf3a CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x0000b50b      0xdca CMakeFiles/RM_Competition.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x0000b50b     0x2516 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_str     0x0000b50b      0x331 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_str     0x0000b50b      0x4b1 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_str     0x0000b50b      0x54a CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_str     0x0000b50b      0xd47 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_str     0x0000b50b     0x1679 CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_str     0x0000b50b      0xf9b CMakeFiles/RM_Competition.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_str     0x0000b50b      0x667 CMakeFiles/RM_Competition.elf.dir/Task/Src/CAN_Task.c.obj
+ .debug_str     0x0000b50b      0x325 CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj
+ .debug_str     0x0000b50b      0x724 CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj
+ .debug_str     0x0000b50b      0x889 CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj
+ .debug_str     0x0000b50b      0x250 CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj
+ .debug_str     0x0000b50b      0x2e2 CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
+ .debug_str     0x0000b50b      0x214 CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
+ .debug_str     0x0000b50b      0x480 CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
+ .debug_str     0x0000b50b      0x36c CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
+ .debug_str     0x0000b50b      0x2af CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+ .debug_str     0x0000b50b      0x890 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+ .debug_str     0x0000b50b      0x2d3 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+ .debug_str     0x0000b50b     0x1445 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
 
 .comment        0x00000000       0x45
  .comment       0x00000000       0x45 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
@@ -10575,7 +10575,7 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .comment       0x00000045       0x46 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
  .comment       0x00000045       0x46 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
 
-.debug_frame    0x00000000     0x5d68
+.debug_frame    0x00000000     0x5d64
  .debug_frame   0x00000000       0x88 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/LED.c.obj
  .debug_frame   0x00000088       0x20 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_PWM.c.obj
  .debug_frame   0x000000a8      0x118 CMakeFiles/RM_Competition.elf.dir/Bsp/Src/bsp_dwt.c.obj
@@ -10632,33 +10632,33 @@ LOAD E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb
  .debug_frame   0x000052d4       0x20 CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj
  .debug_frame   0x000052f4       0x30 CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj
  .debug_frame   0x00005324       0x70 CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj
- .debug_frame   0x00005394       0x50 CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
- .debug_frame   0x000053e4       0x30 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
- .debug_frame   0x00005414       0x70 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
- .debug_frame   0x00005484       0x40 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
- .debug_frame   0x000054c4      0x168 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
- .debug_frame   0x0000562c       0xac E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000056d8       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00005728       0xc4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x000057ec       0x24 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x00005810       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000583c       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00005870       0x30 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
- .debug_frame   0x000058a0       0x48 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
- .debug_frame   0x000058e8       0x30 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
- .debug_frame   0x00005918      0x13c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
- .debug_frame   0x00005a54       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
- .debug_frame   0x00005a80       0x3c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
- .debug_frame   0x00005abc       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
- .debug_frame   0x00005ae8       0x20 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
- .debug_frame   0x00005b08       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
- .debug_frame   0x00005b34       0xb0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
- .debug_frame   0x00005be4       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
- .debug_frame   0x00005c0c       0x5c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x00005c68       0x20 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
- .debug_frame   0x00005c88       0x78 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
- .debug_frame   0x00005d00       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
- .debug_frame   0x00005d34       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+ .debug_frame   0x00005394       0x4c CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj
+ .debug_frame   0x000053e0       0x30 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj
+ .debug_frame   0x00005410       0x70 CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj
+ .debug_frame   0x00005480       0x40 CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj
+ .debug_frame   0x000054c0      0x168 CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj
+ .debug_frame   0x00005628       0xac E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000056d4       0x50 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00005724       0xc4 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000057e8       0x24 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000580c       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00005838       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000586c       0x30 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
+ .debug_frame   0x0000589c       0x48 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+ .debug_frame   0x000058e4       0x30 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+ .debug_frame   0x00005914      0x13c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+ .debug_frame   0x00005a50       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+ .debug_frame   0x00005a7c       0x3c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
+ .debug_frame   0x00005ab8       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
+ .debug_frame   0x00005ae4       0x20 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+ .debug_frame   0x00005b04       0x2c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+ .debug_frame   0x00005b30       0xb0 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+ .debug_frame   0x00005be0       0x28 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
+ .debug_frame   0x00005c08       0x5c E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00005c64       0x20 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+ .debug_frame   0x00005c84       0x78 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+ .debug_frame   0x00005cfc       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+ .debug_frame   0x00005d30       0x34 E:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
 
 .debug_loclists
                 0x00000000    0x14f76
