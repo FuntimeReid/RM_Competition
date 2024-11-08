@@ -76,23 +76,14 @@ int32_t Loc_Error_Now_Calc(pid_t pid,int32_t now,int32_t last)
             temp = (8191 - now + last) + pid.error_now;
             return temp;
         }
-        else
-        {
-            temp = (last - now) + pid.error_now;
-            return temp;
-        }
+        temp = (last - now) + pid.error_now;
+        return temp;
     }
-    else
+    if(now - last < -4200)
     {
-        if(now - last < -4200)
-        {
-            temp = -(last - 8191 + now) + pid.error_now;
-            return temp;
-        }
-        else
-        {
-            temp = (last - now) + pid.error_now;
-            return temp;
-        }
+        temp = -(last - 8191 + now) + pid.error_now;
+        return temp;
     }
-}
+    temp = (last - now) + pid.error_now;
+    return temp;
+}//位置环计算差值

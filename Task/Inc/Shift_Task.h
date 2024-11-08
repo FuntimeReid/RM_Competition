@@ -11,6 +11,7 @@ typedef struct
     float chassis;
     float lift;
     float gyro;
+    float pitch;
 }shift_coefficient_t;
 
 extern uint16_t shift_tim;

@@ -14,8 +14,9 @@ void Shift_Task_Init()
     shift_coefficient.chassis = 10;
     shift_coefficient.lift = 1.5;
     shift_coefficient.gyro = 0.004;
+    shift_coefficient.pitch = 0.1;
     last_s1 = 3;
-}
+}//初始化为快速模式
 
 void Shift_Task()
 {
@@ -43,15 +44,17 @@ void Shift_Task()
                 shift_coefficient.chassis = 0.5;
                 shift_coefficient.lift = 0.5;
                 shift_coefficient.gyro = 0.0003;
-            }
+                shift_coefficient.pitch = 0.1;
+            }//切换为慢速
             else
             {
                 shift_coefficient.if_fast = true;
                 shift_coefficient.chassis = 10;
                 shift_coefficient.lift = 1.5;
                 shift_coefficient.gyro = 0.004;
-            }
+                shift_coefficient.pitch = 0.1;
+            }//切换为快速
             s1_time = 0;
-        }
+        }//要改灵敏度就在这里和init里改数值
     }
 }

@@ -340,7 +340,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   RemoteDataProcess(sbus_rx_buffer);
   osSemaphoreRelease(DBUS_SemHandle);
-  if_start = true;//遥控器第一次打开
+  if_start = true;//遥控器第�?次打�?
 }
 /* USER CODE END Header_StartDBUSTask */
 void StartDBUSTask(void *argument)

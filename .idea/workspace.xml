@@ -23,52 +23,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="6020限位">
+    <list default="true" id="17f89acb-998f-46db-a08b-69853da32e6a" name="更改" comment="添加部分注释和一些说明（readme）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/tim.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/tim.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Inc/PID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Inc/PID.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Driver/Src/PID.c" beforeDir="false" afterPath="$PROJECT_DIR$/Driver/Src/PID.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm4.h" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm4.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RM_Competition.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/RM_Competition.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Inc/Shift_Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/Shift_Task.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Inc/Slide_Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/Slide_Task.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Inc/imu_task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Inc/imu_task.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/Chassis_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Chassis_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/Outage_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Outage_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/PID_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/PID_Task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Src/Door_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Door_Task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Src/Pitch_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Pitch_Task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/Shift_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Shift_Task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Src/Slide_Task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/Slide_Task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Src/imu_task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Src/imu_task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-03T03-13-22-0228.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/gpio.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Core/Src/tim.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Driver/Src/PID.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Chassis_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/DBUS_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Door_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/LED_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Lift_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Outage_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/PID_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Pitch_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Shift_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Shovel_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/Slide_Task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RM_Competition.elf.dir/Task/Src/imu_task.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RM_Competition.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,11 +121,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD RM_Competition">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RM_Competition.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RM_Competition" TARGET_NAME="RM_Competition.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RM_Competition" RUN_TARGET_NAME="RM_Competition.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -267,7 +231,8 @@
       <workItem from="1730882701220" duration="789000" />
       <workItem from="1730939375121" duration="3300000" />
       <workItem from="1730953624882" duration="560000" />
-      <workItem from="1730954195312" duration="4039000" />
+      <workItem from="1730954195312" duration="4326000" />
+      <workItem from="1731032268637" duration="1262000" />
     </task>
     <task id="LOCAL-00001" summary="遥控器解算">
       <option name="closed" value="true" />
@@ -437,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730723498153</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="pid写法优化，添加部分注释，转弯调参（屎）">
+      <option name="closed" value="true" />
+      <created>1730960368515</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730960368515</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,6 +452,8 @@
     <MESSAGE value="利用陀螺仪的转向" />
     <MESSAGE value="完善关控保护（第一次接收遥控信号之前都断电）" />
     <MESSAGE value="6020限位" />
-    <option name="LAST_COMMIT_MESSAGE" value="6020限位" />
+    <MESSAGE value="pid写法优化，添加部分注释，转弯调参（屎）" />
+    <MESSAGE value="添加部分注释和一些说明（readme）" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加部分注释和一些说明（readme）" />
   </component>
 </project>

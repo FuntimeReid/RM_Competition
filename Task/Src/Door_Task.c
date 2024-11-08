@@ -59,7 +59,7 @@ void Door_Ctrl(int16_t pulse)
     else
     {
         door_tim++;
-    }
+    }//设置的开关后门延迟500ms，避免换档的时候误触
 }
 
 void Door_Pulse_Setting(int16_t pulse)
