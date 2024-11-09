@@ -38,7 +38,6 @@
 #include "Door_Task.h"
 #include "LED_Task.h"
 #include "Pitch_Task.h"
-#include "Shovel_Task.h"
 #include "imu_task.h"
 #include "Lift_Task.h"
 #include "Slide_Task.h"
@@ -91,13 +90,6 @@ const osThreadAttr_t PIDTask_attributes = {
   .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for DoorTask */
-osThreadId_t DoorTaskHandle;
-const osThreadAttr_t DoorTask_attributes = {
-  .name = "DoorTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
 /* Definitions for ShiftTask */
 osThreadId_t ShiftTaskHandle;
 const osThreadAttr_t ShiftTask_attributes = {
@@ -133,13 +125,6 @@ const osThreadAttr_t LEDTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for ShovelTask */
-osThreadId_t ShovelTaskHandle;
-const osThreadAttr_t ShovelTask_attributes = {
-  .name = "ShovelTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
 /* Definitions for IMUTask */
 osThreadId_t IMUTaskHandle;
 const osThreadAttr_t IMUTask_attributes = {
@@ -158,6 +143,13 @@ const osThreadAttr_t SlideTask_attributes = {
 osThreadId_t LiftTaskHandle;
 const osThreadAttr_t LiftTask_attributes = {
   .name = "LiftTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for DoorTask */
+osThreadId_t DoorTaskHandle;
+const osThreadAttr_t DoorTask_attributes = {
+  .name = "DoorTask",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
@@ -201,16 +193,15 @@ void StartDefaultTask(void *argument);
 void StartDBUSTask(void *argument);
 void StartCANTask(void *argument);
 void StartPIDTask(void *argument);
-void StartDoorTask(void *argument);
 void StartShiftTask(void *argument);
 void StartChassisTask(void *argument);
 void StartPitchTask(void *argument);
 void StartOutageTask(void *argument);
 void StartLEDTask(void *argument);
-void StartShovelTask(void *argument);
 void StartIMUTask(void *argument);
 void StartSlideTask(void *argument);
 void StartLiftTask(void *argument);
+void StartDoorTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -272,9 +263,6 @@ void MX_FREERTOS_Init(void) {
   /* creation of PIDTask */
   PIDTaskHandle = osThreadNew(StartPIDTask, NULL, &PIDTask_attributes);
 
-  /* creation of DoorTask */
-  DoorTaskHandle = osThreadNew(StartDoorTask, NULL, &DoorTask_attributes);
-
   /* creation of ShiftTask */
   ShiftTaskHandle = osThreadNew(StartShiftTask, NULL, &ShiftTask_attributes);
 
@@ -290,9 +278,6 @@ void MX_FREERTOS_Init(void) {
   /* creation of LEDTask */
   LEDTaskHandle = osThreadNew(StartLEDTask, NULL, &LEDTask_attributes);
 
-  /* creation of ShovelTask */
-  ShovelTaskHandle = osThreadNew(StartShovelTask, NULL, &ShovelTask_attributes);
-
   /* creation of IMUTask */
   IMUTaskHandle = osThreadNew(StartIMUTask, NULL, &IMUTask_attributes);
 
@@ -301,6 +286,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of LiftTask */
   LiftTaskHandle = osThreadNew(StartLiftTask, NULL, &LiftTask_attributes);
+
+  /* creation of DoorTask */
+  DoorTaskHandle = osThreadNew(StartDoorTask, NULL, &DoorTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -340,7 +328,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   RemoteDataProcess(sbus_rx_buffer);
   osSemaphoreRelease(DBUS_SemHandle);
-  if_start = true;//遥控器第�?次打�?
+  if_start = true;//遥控器第�??次打�??
 }
 /* USER CODE END Header_StartDBUSTask */
 void StartDBUSTask(void *argument)
@@ -432,26 +420,6 @@ void StartPIDTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartPIDTask */
-}
-
-/* USER CODE BEGIN Header_StartDoorTask */
-/**
-* @brief Function implementing the DoorTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartDoorTask */
-void StartDoorTask(void *argument)
-{
-  /* USER CODE BEGIN StartDoorTask */
-  Door_Task_Init();
-  /* Infinite loop */
-  for(;;)
-  {
-    Door_Task();
-    osDelay(1);
-  }
-  /* USER CODE END StartDoorTask */
 }
 
 /* USER CODE BEGIN Header_StartShiftTask */
@@ -563,26 +531,6 @@ void StartLEDTask(void *argument)
   /* USER CODE END StartLEDTask */
 }
 
-/* USER CODE BEGIN Header_StartShovelTask */
-/**
-* @brief Function implementing the ShovelTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartShovelTask */
-void StartShovelTask(void *argument)
-{
-  /* USER CODE BEGIN StartShovelTask */
-  Shovel_Task_Init();
-  /* Infinite loop */
-  for(;;)
-  {
-    Shovel_Task();
-    osDelay(1);
-  }
-  /* USER CODE END StartShovelTask */
-}
-
 /* USER CODE BEGIN Header_StartIMUTask */
 /**
 * @brief Function implementing the IMUTask thread.
@@ -641,6 +589,26 @@ void StartLiftTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartLiftTask */
+}
+
+/* USER CODE BEGIN Header_StartDoorTask */
+/**
+* @brief Function implementing the DoorTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDoorTask */
+void StartDoorTask(void *argument)
+{
+  /* USER CODE BEGIN StartDoorTask */
+  Door_Task_Init();
+  /* Infinite loop */
+  for(;;)
+  {
+    Door_Task();
+    osDelay(1);
+  }
+  /* USER CODE END StartDoorTask */
 }
 
 /* Private application code --------------------------------------------------*/
